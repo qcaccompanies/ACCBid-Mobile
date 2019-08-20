@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>daftar</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>cd77800f-cd7c-4709-b295-feb311324840</testSuiteGuid>
+   <testCaseLink>
+      <guid>19d241cf-2f13-4c32-afcf-b6aa1860fbca</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Dashboard/masuk/daftar/flow data binding/daftar</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>9dab6bec-b2ce-4855-8308-8d95839465b8</id>
+         <iterationEntity>
+            <iterationType>SPECIFIC</iterationType>
+            <value>1</value>
+         </iterationEntity>
+         <testDataId>Data Files/daftar/datadaftar</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>9dab6bec-b2ce-4855-8308-8d95839465b8</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>namalengkap </value>
+         <variableId>e928de4a-2ce0-4cfd-b5dc-2174215450e3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>9dab6bec-b2ce-4855-8308-8d95839465b8</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>email</value>
+         <variableId>b63d8ef0-0d1e-48c8-ae87-d170b80e8255</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>9dab6bec-b2ce-4855-8308-8d95839465b8</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>nomor</value>
+         <variableId>2fa3a8ef-f0c9-43c9-b79c-452948c84945</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>9dab6bec-b2ce-4855-8308-8d95839465b8</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>password</value>
+         <variableId>5ac2e59c-038d-4a5c-8d0d-c6682df23c05</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>9dab6bec-b2ce-4855-8308-8d95839465b8</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>password2</value>
+         <variableId>b6bc222f-458e-45fb-8dd2-8447bbef3746</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>9dab6bec-b2ce-4855-8308-8d95839465b8</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>1e0a17cc-35e3-44ad-9512-2f9f47a8c3b8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>9dab6bec-b2ce-4855-8308-8d95839465b8</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>keterangan</value>
+         <variableId>d27b99a3-9262-4c4a-babb-1831321b60e4</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>
