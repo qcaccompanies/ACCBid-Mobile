@@ -26,7 +26,7 @@ if (Mobile.verifyElementVisible(findTestObject('masuk'), 0)) {
 }
 
 if (Mobile.verifyElementVisible(findTestObject('masuk_akun_lain'), 0)) {
-	Mobile.tap(findTestObject('masuk_akun_lain'), 0)
+    Mobile.tap(findTestObject('masuk_akun_lain'), 0)
 }
 
 Mobile.setText(findTestObject('isi_user'), username, 0)
@@ -44,12 +44,14 @@ not_run: Mobile.tap(findTestObject('masuk_akun_lain'), 0)
 
 switch (expected.toString()) {
     case 'passed':
-        Mobile.verifyElementVisible(findTestObject('akun'), 0)
+        Mobile.verifyElementNotVisible(findTestObject('btn_login'), 0)
 
         break
     case 'failed':
         Mobile.verifyElementVisible(findTestObject('btn_login'), 0)
 
+        break
+        
         not_run: if (keterangan.toString() == 'wrongpass') {
             Mobile.verifyElementVisible(findTestObject('btn_login'), 0)
         }
