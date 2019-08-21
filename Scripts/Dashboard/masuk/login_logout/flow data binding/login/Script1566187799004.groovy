@@ -13,16 +13,20 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-Mobile.startApplication('C:\\Users\\Intan\\Downloads\\accbid.apk', false)
+Mobile.startApplication('C:\\Users\\Intan\\Downloads\\accbid.apk', true)
 
 Mobile.waitForElementPresent(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
 
 Mobile.tap(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
 
-if (Mobile.verifyElementVisible(findTestObject('masuk_akun_lain'), 0)) {
-    Mobile.tap(findTestObject('masuk_akun_lain'), 0)
-} else if (Mobile.verifyElementVisible(findTestObject('masuk_akun_lain'), 0)) {
+Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+
+if (Mobile.verifyElementVisible(findTestObject('masuk'), 0)) {
     Mobile.tap(findTestObject('masuk'), 0)
+}
+
+if (Mobile.verifyElementVisible(findTestObject('masuk_akun_lain'), 0)) {
+	Mobile.tap(findTestObject('masuk_akun_lain'), 0)
 }
 
 Mobile.setText(findTestObject('isi_user'), username, 0)
@@ -44,15 +48,17 @@ switch (expected.toString()) {
 
         break
     case 'failed':
-        if (keterangan.toString() == 'wrongpass') {
+        Mobile.verifyElementVisible(findTestObject('btn_login'), 0)
+
+        not_run: if (keterangan.toString() == 'wrongpass') {
             Mobile.verifyElementVisible(findTestObject('btn_login'), 0)
         }
         
-        if (keterangan.toString() == 'wrongemail') {
+        not_run: if (keterangan.toString() == 'wrongemail') {
             Mobile.verifyElementVisible(findTestObject('btn_login'), 0)
         }
         
-        if (keterangan.toString() == 'fieldempty') {
+        not_run: if (keterangan.toString() == 'fieldempty') {
             Mobile.verifyElementVisible(findTestObject('btn_login'), 0)
 
             break
