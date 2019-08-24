@@ -21,26 +21,26 @@ Mobile.tap(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
 
 Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-if (Mobile.verifyElementVisible(findTestObject('masuk'), 0)) {
+if (Mobile.verifyElementVisible(findTestObject('masuk'), 3, FailureHandling.OPTIONAL)) {
     Mobile.tap(findTestObject('masuk'), 0)
-}
-
-if (Mobile.verifyElementVisible(findTestObject('masuk_akun_lain'), 0)) {
+} else {
     Mobile.tap(findTestObject('masuk_akun_lain'), 0)
 }
 
 Mobile.setText(findTestObject('isi_user'), username, 0)
 
-Mobile.setText(findTestObject('isi_pass (1)'), password, 0)
+Mobile.setText(findTestObject('isi_pass_login'), password, 0)
 
 Mobile.tap(findTestObject('btn_login'), 0)
 
-WebUI.callTestCase(findTestCase('Dashboard/masuk/login_logout/flow data binding/logout'), [('username') : '', ('password') : ''
-        , ('expected') : '', ('keterangan') : ''], FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-not_run: Mobile.tap(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
-
-not_run: Mobile.tap(findTestObject('masuk_akun_lain'), 0)
+if (Mobile.verifyElementVisible(findTestObject('akun'), 3, FailureHandling.OPTIONAL)) {
+    WebUI.callTestCase(findTestCase('Dashboard/masuk/login_logout/flow data binding/logout'), [('username') : '', ('password') : ''
+            , ('expected') : '', ('keterangan') : ''], FailureHandling.STOP_ON_FAILURE)
+} else {
+    Mobile.closeApplication()
+}
 
 switch (expected.toString()) {
     case 'passed':

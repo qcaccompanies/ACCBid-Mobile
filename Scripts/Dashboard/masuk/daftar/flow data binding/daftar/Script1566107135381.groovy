@@ -52,8 +52,32 @@ switch (expected.toString()) {
             Mobile.verifyElementVisible(findTestObject('warning_pass_tdksesuai'), 0)
         }
         
-        if (keterangan.toString() == 'fieldempty2') {
+        if (keterangan.toString() == 'hapusisian') {
             Mobile.clearText(findTestObject('isi_nama'), 0)
+
+            Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
+        }
+        
+        if (true) {
+            Mobile.clearText(findTestObject('isi_email'), 0)
+
+            Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
+        }
+        
+        if (keterangan.toString() == 'hapusisian') {
+            Mobile.clearText(findTestObject('isi_nomor'), 0)
+
+            Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
+        }
+        
+        if (keterangan.toString() == 'hapusisian') {
+            Mobile.clearText(findTestObject('isi_pass'), 0)
+
+            Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
+        }
+        
+        if (keterangan.toString() == 'hapusisian') {
+            Mobile.clearText(findTestObject('isi_pass2'), 0)
 
             Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
         }

@@ -13,14 +13,3 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-not_run: WebUI.callTestCase(findTestCase('Dashboard/masuk/login_logout/flow data binding/login'), [('username') : '', ('password') : ''
-        , ('expected') : '', ('keterangan') : ''], FailureHandling.STOP_ON_FAILURE)
-
-Mobile.tap(findTestObject('akun'), 0)
-
-Mobile.tap(findTestObject('keluar'), 0)
-
-Mobile.tap(findTestObject('btn_ya_keluar'), 0)
-
-Mobile.verifyElementVisible(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
-

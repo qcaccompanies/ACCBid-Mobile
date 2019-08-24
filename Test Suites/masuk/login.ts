@@ -49,43 +49,4 @@
          <variableId>857b90e1-17bd-40cc-bd80-899311059fab</variableId>
       </variableLink>
    </testCaseLink>
-   <testCaseLink>
-      <guid>edeb7ff1-c3c8-4764-80f6-931e3f6f89b3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Dashboard/masuk/login_logout/flow data binding/logout</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>7a941bb9-dffa-4265-ab40-689e7f5d08b2</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/login/data login</testDataId>
-      </testDataLink>
-      <variableLink>
-         <testDataLinkId>7a941bb9-dffa-4265-ab40-689e7f5d08b2</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>username </value>
-         <variableId>6cc8b1f4-d5d2-407c-936f-7cde6cc56f4d</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>7a941bb9-dffa-4265-ab40-689e7f5d08b2</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>password</value>
-         <variableId>d0ed3424-3a5c-4104-ab45-df0239d6e7f5</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>7a941bb9-dffa-4265-ab40-689e7f5d08b2</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>expected</value>
-         <variableId>0b4ae41f-235c-4f24-a3ab-8ea3f6b5e220</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>7a941bb9-dffa-4265-ab40-689e7f5d08b2</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>keterangan </value>
-         <variableId>678414c4-39e5-41a7-8751-a5abc84124c6</variableId>
-      </variableLink>
-   </testCaseLink>
 </TestSuiteEntity>
