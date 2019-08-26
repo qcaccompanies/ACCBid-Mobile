@@ -52,31 +52,31 @@ switch (expected.toString()) {
             Mobile.verifyElementVisible(findTestObject('warning_pass_tdksesuai'), 0)
         }
         
-        if (keterangan.toString() == 'hapusisian') {
+        if (keterangan.toString() == 'hapusnama') {
             Mobile.clearText(findTestObject('isi_nama'), 0)
 
             Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
         }
         
-        if (true) {
+        if (keterangan.toString() == 'hapusemail') {
             Mobile.clearText(findTestObject('isi_email'), 0)
 
             Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
         }
         
-        if (keterangan.toString() == 'hapusisian') {
+        if (keterangan.toString() == 'hapusnomor') {
             Mobile.clearText(findTestObject('isi_nomor'), 0)
 
             Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
         }
         
-        if (keterangan.toString() == 'hapusisian') {
+        if (keterangan.toString() == 'hapuspass') {
             Mobile.clearText(findTestObject('isi_pass'), 0)
 
             Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)
         }
         
-        if (keterangan.toString() == 'hapusisian') {
+        if (keterangan.toString() == 'hapuspass2') {
             Mobile.clearText(findTestObject('isi_pass2'), 0)
 
             Mobile.verifyElementAttributeValue(findTestObject('btn_daftar'), 'enabled', 'false', 5)

@@ -35,7 +35,7 @@ Mobile.tap(findTestObject('btn_login'), 0)
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-if (Mobile.verifyElementVisible(findTestObject('akun'), 3, FailureHandling.OPTIONAL)) {
+not_run: if (Mobile.verifyElementVisible(findTestObject('akun'), 3, FailureHandling.OPTIONAL)) {
     WebUI.callTestCase(findTestCase('Dashboard/masuk/login_logout/flow data binding/logout'), [('username') : '', ('password') : ''
             , ('expected') : '', ('keterangan') : ''], FailureHandling.STOP_ON_FAILURE)
 } else {
@@ -45,6 +45,9 @@ if (Mobile.verifyElementVisible(findTestObject('akun'), 3, FailureHandling.OPTIO
 switch (expected.toString()) {
     case 'passed':
         Mobile.verifyElementNotVisible(findTestObject('btn_login'), 0)
+
+        WebUI.callTestCase(findTestCase('Dashboard/masuk/login_logout/flow data binding/logout'), [('username') : '', ('password') : ''
+                , ('expected') : '', ('keterangan') : ''], FailureHandling.STOP_ON_FAILURE)
 
         break
     case 'failed':
