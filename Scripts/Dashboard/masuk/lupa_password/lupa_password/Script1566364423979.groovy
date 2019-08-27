@@ -17,9 +17,17 @@ Mobile.startApplication('C:\\Users\\Intan\\Downloads\\accbid.apk', true)
 
 Mobile.waitForElementPresent(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
 
-Mobile.tap(findTestObject('masuk'), 0)
+Mobile.tap(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
 
-Mobile.tap(findTestObject('lupa_kata_sandi'), 0)
+if (Mobile.verifyElementVisible(findTestObject('masuk'), 3, FailureHandling.OPTIONAL)) {
+    Mobile.tap(findTestObject('masuk'), 0)
+
+    Mobile.tap(findTestObject('lupakatasandi2'), 0)
+} else {
+    Mobile.tap(findTestObject('masuk_akun_lain'), 0)
+
+    Mobile.tap(findTestObject('lupakatasandi1'), 0)
+}
 
 Mobile.setText(findTestObject('isi_email_lupapassword'), '', 0)
 
@@ -28,8 +36,6 @@ Mobile.tap(findTestObject('btn_konfirmasi'), 0)
 switch (expectedemail.toString()) {
     case 'passed':
         Mobile.verifyElementVisible(findTestObject('verifikasi_keamanan'), 0)
-
-        Mobile.waitForElementPresent(findTestObject('lupa_kata_sandi'), 0)
 
         Mobile.setText(findTestObject('new_pass'), newpass, 0)
 
