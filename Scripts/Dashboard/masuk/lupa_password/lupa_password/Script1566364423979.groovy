@@ -29,7 +29,7 @@ if (Mobile.verifyElementVisible(findTestObject('masuk'), 3, FailureHandling.OPTI
     Mobile.tap(findTestObject('lupakatasandi1'), 0)
 }
 
-Mobile.setText(findTestObject('isi_email_lupapassword'), '', 0)
+Mobile.setText(findTestObject('isi_email_lupapassword'), email, 0)
 
 Mobile.tap(findTestObject('btn_konfirmasi'), 0)
 
@@ -54,9 +54,9 @@ switch (expectedemail.toString()) {
                 break
         }
     case 'failed':
-        if (keterangan.toString() == 'notregistered') {
+        if (keteranganpass.toString() == 'notregistered') {
             Mobile.verifyElementAttributeValue(findTestObject('btn_konfirmasi'), 'enabled', 'false', 5)
-        } else if (keterangan.toString() == 'wronginput') {
+        } else if (keteranganpass.toString() == 'wronginput') {
             Mobile.verifyElementAttributeValue(findTestObject('btn_konfirmasi'), 'enabled', 'false', 5)
         }
         

@@ -13,3 +13,36 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+Mobile.startApplication('C:\\Users\\Intan\\Downloads\\accbid.apk', true)
+
+Mobile.waitForElementPresent(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
+
+Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('lihatsemuapromo'), 0)
+
+Mobile.setText(findTestObject('isi_field_promo'), namapromo, 0)
+
+switch (expected.toString()) {
+    case 'passed':
+        if (keterangan.toString() == 'promo1') {
+            Mobile.verifyElementVisible(findTestObject('null'), 0)
+
+            Mobile.tap(findTestObject('null'), 0)
+        }
+        
+        if (keterangan.toString() == 'promo2') {
+            Mobile.tap(findTestObject('null'), 0)
+        }
+        
+        if (keterangan.toString() == 'promo3') {
+            Mobile.tap(findTestObject('null'), 0)
+
+            break
+        }
+    case 'failed':
+        Mobile.verifyElementVisible(findTestObject('promotidakditemukan'), 0)
+
+        break
+}
+

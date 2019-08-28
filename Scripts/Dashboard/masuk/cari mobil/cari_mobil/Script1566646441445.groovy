@@ -19,5 +19,11 @@ Mobile.waitForElementPresent(findTestObject('android.view.View30 - Masuk atau Da
 
 Mobile.tap(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
 
-Mobile.checkElement(findTestObject(null), 0)
+Mobile.tap(findTestObject('carimobil'), 0)
+
+Mobile.setText(findTestObject('isi_brand'), '', 0)
+
+Mobile.setText(findTestObject('isi_type'), '', 0)
+
+Mobile.setText(findTestObject('isi_model'), '', 0)
 

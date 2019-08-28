@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>promo</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>a9b3e0fb-5f70-4124-a78d-08fb9061a1a0</testSuiteGuid>
+   <testCaseLink>
+      <guid>9a9de2b8-5cfd-4607-9356-d6d201d1acf1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Dashboard/masuk/promo/cari_promo</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>81450c54-673e-4b73-b46b-de242ff98484</id>
+         <iterationEntity>
+            <iterationType>RANGE</iterationType>
+            <value>1-1</value>
+         </iterationEntity>
+         <testDataId>Data Files/cari/cari_promo</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>81450c54-673e-4b73-b46b-de242ff98484</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>namapromo</value>
+         <variableId>403c6d50-6961-4365-bace-41708d00584c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>81450c54-673e-4b73-b46b-de242ff98484</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>c9d123f9-0602-432a-b3d0-3cdf34def1a3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>81450c54-673e-4b73-b46b-de242ff98484</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>keterangan</value>
+         <variableId>f4468fea-d7a2-4172-8573-080529f709fe</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>
