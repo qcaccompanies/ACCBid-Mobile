@@ -19,8 +19,8 @@
          <combinationType>ONE</combinationType>
          <id>b593dc10-4a45-471c-80fd-dbc6d2a748ff</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-1</value>
          </iterationEntity>
          <testDataId>Data Files/cari/cari_mobil</testDataId>
       </testDataLink>

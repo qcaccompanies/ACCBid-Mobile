@@ -15,15 +15,31 @@ import internal.GlobalVariable as GlobalVariable
 
 Mobile.startApplication('C:\\Users\\Intan\\Downloads\\accbid.apk', true)
 
-Mobile.waitForElementPresent(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
-
-Mobile.tap(findTestObject('android.view.View30 - Masuk atau Daftar'), 0)
-
 Mobile.tap(findTestObject('carimobil'), 0)
 
-Mobile.setText(findTestObject('isi_brand'), '', 0)
+Mobile.tap(findTestObject('brand'), 0)
 
-Mobile.setText(findTestObject('isi_type'), '', 0)
+Mobile.setText(findTestObject('isi_brand'), brand, 0)
 
-Mobile.setText(findTestObject('isi_model'), '', 0)
+Mobile.tap(findTestObject('type'), 0)
+
+Mobile.setText(findTestObject('isi_type'), type, 0)
+
+Mobile.tap(findTestObject('model'), 0)
+
+Mobile.setText(findTestObject('isi_model'), model, 0)
+
+Mobile.tap(findTestObject('tahunmin'), 0)
+
+Mobile.setText(findTestObject('isi_tahun_min'), tahunmin, 0)
+
+Mobile.tap(findTestObject('tahunmaks'), 0)
+
+Mobile.setText(findTestObject('isi_tahun_maks'), tahunmaks, 0)
+
+Mobile.tap(findTestObject('null'), 0)
+
+Mobile.tap(findTestObject('tipelelang_terbuka'), 0)
+
+Mobile.tap(findTestObject('btn_cari_mobil'), 0)
 
