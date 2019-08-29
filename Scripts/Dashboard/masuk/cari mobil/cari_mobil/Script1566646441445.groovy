@@ -37,7 +37,7 @@ Mobile.tap(findTestObject('tahunmaks'), 0)
 
 Mobile.setText(findTestObject('isi_tahun_maks'), tahunmaks, 0)
 
-Mobile.tap(findTestObject('null'), 0)
+Mobile.tap(findTestObject('transmisi_automatic'), 0)
 
 Mobile.tap(findTestObject('tipelelang_terbuka'), 0)
 

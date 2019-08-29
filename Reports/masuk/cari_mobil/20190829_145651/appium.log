@@ -1678,3 +1678,9 @@
 [35m[HTTP][39m [90m{"using":"-android uiautomator","value":"new UiSelector().className(\"android.widget.Button\").text(\"Cari\").instance(6)"}[39m
 [35m[HTTP][39m [37m<-- POST /wd/hub/session/1dce3903-fc06-497c-8123-34230f78dcd1/elements [39m[32m-[39m [90m- ms - -[39m
 [35m[HTTP][39m [90m[39m
+[35m[BaseDriver][39m Shutting down because we waited 1800 seconds for a command
+[35m[Appium][39m Closing session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+[35m[Appium][39m Removing session 1dce3903-fc06-497c-8123-34230f78dcd1 from our master session list
+[35m[UiAutomator2][39m Did not get confirmation UiAutomator2 deleteSession worked; Error was: ProxyRequestError: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8202
+[35m[ADB][39m com.outsystemsenterprise.acctst1.BidMart was not uninstalled, because it was not present on the device
+[35m[UiAutomator2][39m Unable to remove port forward 'Error executing adbExec. Original error: 'Command 'C\:\\Users\\Intan\\.katalon\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s 14ace643 forward --remove tcp\:8202' exited with code 1'; Stderr: 'adb.exe: error: listener 'tcp:8202' not found'; Code: '1''

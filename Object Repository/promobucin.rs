@@ -7,7 +7,9 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@class = 'android.view.View' and (text() = 'Promo Bucin' or . = 'Promo Bucin') and @resource-id = 'b2-l1-34-DescriptionContent']</value>
+         <value>//*[@class = 'android.view.View' and (text() = '${text}
+' or . = '${text}
+')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,10 +33,11 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Promo Bucin</value>
+      <value>${text}
+</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>resource-id</name>
       <type>Main</type>

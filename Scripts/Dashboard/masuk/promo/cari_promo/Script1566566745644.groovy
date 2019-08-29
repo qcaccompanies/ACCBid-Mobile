@@ -25,27 +25,9 @@ Mobile.setText(findTestObject('isi_field_promo'), namapromo, 0)
 
 switch (expected.toString()) {
     case 'passed':
-        if (keterangan.toString() == 'promo1') {
-            Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+        Mobile.tap(findTestObject('promobucin', [('text') : namapromo]), 0)
 
-            Mobile.tap(findTestObject('promobucin'), 0)
-        }
-        
-        if (keterangan.toString() == 'promo2') {
-            Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
-
-            Mobile.tap(findTestObject('promokeluarga'), 0)
-        }
-        
-        if (keterangan.toString() == 'promo3') {
-            Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
-
-            Mobile.tap(findTestObject('promomahasiswa'), 0)
-
-            break
-        }
-        
-        not_run: Mobile.tap(findTestObject('promo_bucin'), 0)
+        break
     case 'failed':
         Mobile.verifyElementVisible(findTestObject('promotidakditemukan'), 0)
 

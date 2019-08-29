@@ -53,6 +53,8 @@ switch (expectedemail.toString()) {
 
                 break
         }
+        
+        break
     case 'failed':
         if (keteranganpass.toString() == 'notregistered') {
             Mobile.verifyElementAttributeValue(findTestObject('btn_konfirmasi'), 'enabled', 'false', 5)
