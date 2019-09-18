@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>ubah_profil</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>c41b62cf-6948-4964-bdb6-1f859788abd9</testSuiteGuid>
+   <testCaseLink>
+      <guid>181f0e09-1deb-4135-8b3f-59d94bf904c1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Dashboard/profil/ubah_profil</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>2f29643d-1f74-44ac-895e-dc5991e5b644</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/ubah_profil/ubah_profil</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>nomorhandphone</value>
+         <variableId>23887cc2-8360-4183-a20e-df72cc2b1447</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>tanggallahir</value>
+         <variableId>752cdb51-e7df-4e32-ba5c-b02d4709f5c8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>alamat</value>
+         <variableId>ace8befa-75f8-4b1b-909b-ef1709b7fee3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>pekerjaan</value>
+         <variableId>9b147729-7bd1-4356-b578-6510ba507210</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>6021fcc5-307f-4bf9-8da6-7fd8b74ad182</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>keterangan</value>
+         <variableId>f51a2314-840f-41f8-baf7-9998256a5edc</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>
