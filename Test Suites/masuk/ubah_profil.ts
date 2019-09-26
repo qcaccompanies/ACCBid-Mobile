@@ -17,48 +17,54 @@
       <testCaseId>Test Cases/Dashboard/profil/ubah_profil</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>2f29643d-1f74-44ac-895e-dc5991e5b644</id>
+         <id>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-1</value>
          </iterationEntity>
          <testDataId>Data Files/ubah_profil/ubah_profil</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>nomorhandphone</value>
-         <variableId>23887cc2-8360-4183-a20e-df72cc2b1447</variableId>
+         <value>nomorhp</value>
+         <variableId>52db1426-5583-4d75-94d9-26da48fae39d</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>tanggallahir</value>
-         <variableId>752cdb51-e7df-4e32-ba5c-b02d4709f5c8</variableId>
+         <value>nomorhpexpected</value>
+         <variableId>666d8066-bac4-46fe-91e9-d0fe3c5d0d6c</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>alamat</value>
-         <variableId>ace8befa-75f8-4b1b-909b-ef1709b7fee3</variableId>
+         <variableId>2d6b37d1-b49e-468a-8eef-b0a373ecc812</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>alamatexpected</value>
+         <variableId>7c5f125e-5099-4851-a808-dd42a000968a</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>pekerjaan</value>
-         <variableId>9b147729-7bd1-4356-b578-6510ba507210</variableId>
+         <variableId>ffd3c6c9-549c-48cc-b515-6d237c25e4b8</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>expected</value>
-         <variableId>6021fcc5-307f-4bf9-8da6-7fd8b74ad182</variableId>
+         <value>pekerjaanexpected</value>
+         <variableId>615134e6-32ac-4078-b1ad-a744f06e5ac5</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>2f29643d-1f74-44ac-895e-dc5991e5b644</testDataLinkId>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>keterangan</value>
-         <variableId>f51a2314-840f-41f8-baf7-9998256a5edc</variableId>
+         <value>expected </value>
+         <variableId>8eddeaad-b1df-4b12-94b3-f13be78dcd3b</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
