@@ -58,7 +58,7 @@ Mobile.delay(0, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('ubah_profil'), 0)
 
-not_run: WebUI.callTestCase(findTestCase('calendar'), [('varTahun') : '2000'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('calendar'), [('varTahun') : '2000'], FailureHandling.STOP_ON_FAILURE)
 
 Mobile.setText(findTestObject('ubahalamat'), alamat, 0)
 
