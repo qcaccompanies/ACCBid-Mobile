@@ -25,7 +25,9 @@ Mobile.tap(findTestObject('lihatprofil'), 0)
 
 Mobile.tap(findTestObject('ubah_profil'), 0)
 
-Mobile.tap(findTestObject('ubahnomorhandphone'), 0)
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('ubah profil/ubahnohp'), 0)
 
 Mobile.setText(findTestObject('input_nomor_baru'), nomorhp, 0)
 
@@ -35,17 +37,28 @@ Mobile.verifyMatch(nomorhp, nomorhpexpected, false)
 
 Mobile.tap(findTestObject('btn_konf_ganti_nomor'), 0)
 
-if (nomorhpexpected) {
-    Mobile.tap(findTestObject('ubah profil/btn_back_nomorhp'), 0)
+switch (expected_nohp.toString()) {
+    case 'passed':
+        Mobile.waitForElementPresent(findTestObject('ubah profil/element_verif_otp_nohp'), 0)
 
-    Mobile.tap(findTestObject('ubah profil/btn_back_nomorhp_1'), 0)
+        Mobile.setText(findTestObject('ubah profil/input_OTP_nomorhp'), '356195', 0)
 
-    Mobile.tap(findTestObject('ubah profil/ubahprofil_InpTanggalLahir'), 0)
-} else {
-    Mobile.verifyElementVisible(findTestObject('btn_konf_ganti_nomor'), 0)
+        Mobile.tap(findTestObject('ubah profil/btn_verif_otp_nomorhp'), 0)
+
+        Mobile.waitForElementPresent(findTestObject('ubah profil/btn_ok_berhasilubah_nomorhp'), 0)
+
+        Mobile.tap(findTestObject('ubah profil/btn_ok_berhasilubah_nomorhp'), 0)
+
+        break
+    case 'failed':
+        break
 }
 
-WebUI.callTestCase(findTestCase('calendar'), [('varTahun') : '2000'], FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(0, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('ubah_profil'), 0)
+
+not_run: WebUI.callTestCase(findTestCase('calendar'), [('varTahun') : '2000'], FailureHandling.STOP_ON_FAILURE)
 
 Mobile.setText(findTestObject('ubahalamat'), alamat, 0)
 
@@ -55,15 +68,15 @@ Mobile.verifyMatch(inputanubahalamat, alamat, false)
 
 Mobile.setText(findTestObject('ubahpekerjaan'), pekerjaan, 0)
 
-inputanubahalamat = Mobile.getText(findTestObject('ubahpekerjaan'), 0)
+inputanubahpekerjaan = Mobile.getText(findTestObject('ubahpekerjaan'), 0)
 
-Mobile.verifyMatch(inputanubahalamat, alamat, false)
+Mobile.verifyMatch(inputanubahpekerjaan, pekerjaan, false)
 
 Mobile.tap(findTestObject('btn_simpan_ubah_profil'), 0)
 
 switch (expected.toString()) {
     case 'passed':
-        Mobile.verifyElementNotVisible(findTestObject('btn_simpan_ubah_profil'), 0)
+        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
         break
     case 'failed':

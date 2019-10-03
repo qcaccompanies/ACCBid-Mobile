@@ -20,7 +20,7 @@
          <id>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-1</value>
+            <value>5-5</value>
          </iterationEntity>
          <testDataId>Data Files/ubah_profil/ubah_profil</testDataId>
       </testDataLink>
@@ -65,6 +65,24 @@
          <type>DATA_COLUMN</type>
          <value>expected </value>
          <variableId>8eddeaad-b1df-4b12-94b3-f13be78dcd3b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected_nohp</value>
+         <variableId>1a544a54-9a4b-48f4-b0c6-8bf42e66b9f1</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected_alamat</value>
+         <variableId>7a127871-c6c7-48fc-b1b0-869acb68e552</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>4a86ae3f-5de7-43c2-8fe9-8953e6ace57d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected_pekerjaan </value>
+         <variableId>67716734-9418-4424-aa7e-33bbbdc0c02c</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
