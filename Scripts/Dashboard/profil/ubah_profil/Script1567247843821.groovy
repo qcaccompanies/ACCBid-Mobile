@@ -36,21 +36,21 @@ Mobile.closeApplication()
 
 not_run: WebUI.callTestCase(findTestCase('calendar'), [('varTahun') : '2000'], FailureHandling.STOP_ON_FAILURE)
 
-not_run: Mobile.setText(findTestObject('ubahalamat'), alamat, 0)
+Mobile.setText(findTestObject('ubahalamat'), alamat, 0)
 
-not_run: inputanubahalamat = Mobile.getText(findTestObject('ubahalamat'), 0)
+inputanubahalamat = Mobile.getText(findTestObject('ubahalamat'), 0)
 
-not_run: Mobile.verifyMatch(inputanubahalamat, alamat, false)
+Mobile.verifyMatch(inputanubahalamat, alamat, false)
 
-not_run: Mobile.setText(findTestObject('ubahpekerjaan'), pekerjaan, 0)
+Mobile.setText(findTestObject('ubahpekerjaan'), pekerjaan, 0)
 
-not_run: inputanubahalamat = Mobile.getText(findTestObject('ubahpekerjaan'), 0)
+inputanubahalamat = Mobile.getText(findTestObject('ubahpekerjaan'), 0)
 
-not_run: Mobile.verifyMatch(inputanubahalamat, alamat, false)
+Mobile.verifyMatch(inputanubahalamat, alamat, false)
 
-not_run: Mobile.tap(findTestObject('btn_simpan_ubah_profil'), 0)
+Mobile.tap(findTestObject('btn_simpan_ubah_profil'), 0)
 
-not_run: switch (expected.toString()) {
+switch (expected.toString()) {
     case 'passed':
         Mobile.verifyElementNotVisible(findTestObject('btn_simpan_ubah_profil'), 0)
 
