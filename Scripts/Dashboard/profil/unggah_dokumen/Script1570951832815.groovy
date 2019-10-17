@@ -19,3 +19,66 @@ Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('akun'), 0)
 
+Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('unggah_dokumen/unggah_dokumen'), 0)
+
+switch (hapus_foto.toString()) {
+    case 'tidak':
+        not_run: Mobile.tap(findTestObject('unggah_dokumen/btn_ktp'), 0)
+
+        not_run: Mobile.tap(findTestObject('unggah_dokumen/gallery'), 0)
+
+        not_run: Mobile.tap(findTestObject('unggah_dokumen/dir_downloads_gallery'), 0)
+
+        not_run: Mobile.scrollToText(nama_foto, FailureHandling.STOP_ON_FAILURE)
+
+        not_run: Mobile.tap(findTestObject('unggah_dokumen/pick_list_gambar', [('text') : nama_foto]), 0)
+
+        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.tap(findTestObject('unggah_dokumen/btn_npwp'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/gallery'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/dir_downloads_gallery'), 0)
+
+        Mobile.scrollToText(nama_foto, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.tap(findTestObject('unggah_dokumen/pick_list_gambar'), 0)
+
+        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.tap(findTestObject('unggah_dokumen/btn_kk'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/gallery'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/dir_downloads_gallery'), 0)
+
+        Mobile.scrollToText(nama_foto, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.tap(findTestObject('unggah_dokumen/pick_list_gambar'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/btn_submit_ubah_dokumen'), 0)
+
+        break
+    case 'ya':
+        Mobile.tap(findTestObject('unggah_dokumen/ubah_unggah_dokumen'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/sampah'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/ya_hapus'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/btn_ktp_stlh_hapus'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/gallery'), 0)
+
+        Mobile.tap(findTestObject('unggah_dokumen/dir_downloads_gallery'), 0)
+
+        Mobile.scrollToText(nama_foto, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.tap(findTestObject('unggah_dokumen/btn_submit_ubah_dokumen'), 0)
+
+        break
+}
+

@@ -20,7 +20,7 @@
          <id>4c003490-455d-4d3d-9c00-a15684632cd2</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-1</value>
+            <value>2-2</value>
          </iterationEntity>
          <testDataId>Data Files/ubah_profil/ubah_password</testDataId>
       </testDataLink>

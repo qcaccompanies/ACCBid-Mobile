@@ -37,6 +37,8 @@ inputanpassbaru = Mobile.getText(findTestObject('ubah profil/input_pass_baru'), 
 
 Mobile.verifyMatch(passbaru, expected_passbaru, false)
 
+Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+
 Mobile.setText(findTestObject('ubah profil/kon_pass_baru'), konf_pass_baru, 0)
 
 inputankonfpassbaru = Mobile.getText(findTestObject('ubah profil/kon_pass_baru'), 0)
