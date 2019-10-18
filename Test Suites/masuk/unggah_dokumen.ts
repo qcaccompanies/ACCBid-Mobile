@@ -43,9 +43,9 @@
          <variableId>e0b32713-6db3-4457-adba-c9e9ab06c4ae</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>892defd6-27e8-4308-a690-5ed60c4cb1f2</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>hapus_foto</value>
          <variableId>17d3178e-06f1-4308-971c-8a5c2655bdca</variableId>
       </variableLink>
    </testCaseLink>

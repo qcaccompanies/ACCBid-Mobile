@@ -55,10 +55,8 @@ switch (expected.toString()) {
 
         break
     case 'failed':
-        Mobile.verifyElementVisible(findTestObject('null'), 0)
+        Mobile.verifyElementNotVisible(findTestObject('ubah_profil'), 0)
 
-        break
-    case true:
         break
 }
 
