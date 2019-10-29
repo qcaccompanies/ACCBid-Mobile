@@ -23,10 +23,11 @@ Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('akun_bank/akun_bank'), 0)
 
-not_run: if (true) {
+if (Mobile.verifyElementVisible(findTestObject('tambah_akun_bank'), 3, FailureHandling.OPTIONAL)) {
+    Mobile.tap(findTestObject('akun_bank/tambah_akun_bank'), 0)
+} else {
+    Mobile.tap(findTestObject('akun_bank/btn_tambah_akun_bank_lain'), 0)
 }
-
-Mobile.tap(findTestObject('akun_bank/tambah_akun_bank'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
