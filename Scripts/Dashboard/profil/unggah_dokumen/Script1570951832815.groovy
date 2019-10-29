@@ -33,7 +33,7 @@ switch (hapus_foto.toString()) {
 
         not_run: Mobile.scrollToText(nama_foto, FailureHandling.STOP_ON_FAILURE)
 
-        not_run: Mobile.tap(findTestObject('unggah_dokumen/pick_list_gambar', [('text') : nama_foto]), 0)
+        not_run: Mobile.tap(findTestObject('object_diluar_aplikasi/picklist'), 0)
 
         Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
@@ -45,7 +45,7 @@ switch (hapus_foto.toString()) {
 
         Mobile.scrollToText(nama_foto, FailureHandling.STOP_ON_FAILURE)
 
-        Mobile.tap(findTestObject('unggah_dokumen/pick_list_gambar', [('text') : nama_foto]), 0)
+        Mobile.tap(findTestObject('object_diluar_aplikasi/picklist'), 0)
 
         Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
@@ -57,7 +57,7 @@ switch (hapus_foto.toString()) {
 
         Mobile.scrollToText(nama_foto, FailureHandling.STOP_ON_FAILURE)
 
-        Mobile.tap(findTestObject('unggah_dokumen/pick_list_gambar', [('text') : nama_foto]), 0)
+        Mobile.tap(findTestObject('object_diluar_aplikasi/picklist'), 0)
 
         Mobile.tap(findTestObject('unggah_dokumen/btn_submit_ubah_dokumen'), 0)
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>pick_list_gambar</name>
+   <name>picklist</name>
    <tag></tag>
-   <elementGuidId>bc230739-ea28-4da6-8309-299cc2ec709e</elementGuidId>
+   <elementGuidId>4e199bfc-71f4-46e1-8270-f7f10d6cb434</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>

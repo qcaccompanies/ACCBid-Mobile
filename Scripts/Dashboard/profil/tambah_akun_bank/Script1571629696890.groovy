@@ -23,11 +23,20 @@ Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('akun_bank/akun_bank'), 0)
 
+not_run: if (true) {
+}
+
 Mobile.tap(findTestObject('akun_bank/tambah_akun_bank'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
+Mobile.tap(findTestObject('akun_bank/input_nama_bank'), 0)
+
 Mobile.setText(findTestObject('akun_bank/input_nama_bank'), nama_bank, 0)
+
+Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('object_diluar_aplikasi/picklist', [('text') : nama_bank]), 0)
 
 inputan_nama_bank = Mobile.getText(findTestObject('akun_bank/input_nama_bank'), 0)
 
@@ -51,9 +60,9 @@ inputan_nomor_rekening = Mobile.getText(findTestObject('akun_bank/input_nomor_re
 
 Mobile.verifyMatch(nomor_rekening, expected_nomor_rek, false)
 
-Mobile.setText(findTestObject('akun_bank/input_kata_sandi'), kata_sandi, 0)
-
 Mobile.tap(findTestObject('akun_bank/input_kata_sandi'), 0)
+
+Mobile.setText(findTestObject('akun_bank/input_kata_sandi'), kata_sandi, 0)
 
 inputan_kata_sandi = Mobile.getText(findTestObject('akun_bank/input_kata_sandi'), 0)
 
@@ -63,15 +72,19 @@ Mobile.tapAtPosition(0, 66)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('akun_bank/btn_tambah_akun_bank'), 0)
-
-Mobile.tap(findTestObject('akun_bank/btn_tambah_akun_bank'), 0)
+Mobile.tap(findTestObject('akun_bank/btn_tambah_akun_bank1'), 0)
 
 switch (expected.toString()) {
     case 'passed':
         Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-        Mobile.verifyElementNotVisible(findTestObject('akun_bank/btn_tambah_akun_bank'), 0)
+        Mobile.verifyElementNotVisible(findTestObject('akun_bank/btn_tambah_akun_bank1'), 0)
+
+        break
+    case 'failed':
+        Mobile.delay(0, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.verifyElementVisible(findTestObject('akun_bank/btn_tambah_akun_bank1'), 0)
 
         break
 }
