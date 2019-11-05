@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>Penarikan</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>60</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>78d6da9c-2fc4-4aa8-a2ee-674a25da7f95</testSuiteGuid>
+   <testCaseLink>
+      <guid>cf88a2fe-e0d4-413e-aaee-e9624990d5d3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TopUP/Penarikan</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/TopUP/Penarikan</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Nominal</value>
+         <variableId>9ef578f2-306f-4e61-8520-35e055a4c79f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Bank</value>
+         <variableId>a55e6b03-db73-4772-ade3-13e20c2706b0</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

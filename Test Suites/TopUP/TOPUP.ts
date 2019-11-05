@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TOPUP</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>60</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>9dc170d6-e9ed-4007-aa16-71e2440f1193</testSuiteGuid>
+   <testCaseLink>
+      <guid>d5ee1b85-7041-43d5-b3c7-84da650799ab</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TopUP/TopUP</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>d8fb1a1e-1105-4fb8-a8e1-e17fbc2fe61a</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/TopUP/TOPUP</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>d8fb1a1e-1105-4fb8-a8e1-e17fbc2fe61a</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varTopUP</value>
+         <variableId>07192b22-57e6-4372-9b11-5043bca583ff</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d8fb1a1e-1105-4fb8-a8e1-e17fbc2fe61a</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varBank</value>
+         <variableId>2d7763a6-67f4-420b-bcb0-3ef0622f1b5b</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>
