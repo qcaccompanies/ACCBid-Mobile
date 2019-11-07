@@ -1,0 +1,1 @@
+katalon -noSplash  -runMode=console -projectPath="C:\Users\Marvin\Documents\GitHub\ACCBid-Mobile\ACCBid.prj" -retry=0 -testSuitePath="Test Suites/Kalkulator/Kalkulator_20191107_082409" -executionProfile="default" -browserType="Android"

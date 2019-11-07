@@ -1,0 +1,1 @@
+katalon -noSplash  -runMode=console -projectPath="C:\Users\Marvin\Documents\GitHub\ACCBid-Mobile\ACCBid.prj" -retry=0 -testSuitePath="Test Suites/TopUP/Penarikan_20191106_150517" -executionProfile="default" -browserType="Android"

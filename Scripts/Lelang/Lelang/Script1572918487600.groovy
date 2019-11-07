@@ -41,9 +41,20 @@ Mobile.tap(findTestObject('Lelang/MonthRadio', [('text') : Tahun]), 0)
 
 Mobile.tap(findTestObject('Lelang/TapTanggal', [('text') : Tanggal]), 0)
 
-if (Mobile.verifyElementVisible(findTestObject('Lelang/BarLelang'), 0, FailureHandling.STOP_ON_FAILURE)) {
+if (Mobile.verifyElementText(findTestObject('Lelang/LelangDetail'), Event, FailureHandling.OPTIONAL)) {
     Mobile.tap(findTestObject('Lelang/BarLelang'), 0, FailureHandling.STOP_ON_FAILURE)
 } else {
-    Mobile.comment('Tak Ada Lelang')
+    Mobile.verifyElementNotVisible(findTestObject('Lelang/BarLelang'), 5)
+}
+
+switch ('Result') {
+    case 'Pass':
+        Mobile.verifyElementVisible(findTestObject('Lelang/BarLelang'), 5, FailureHandling.STOP_ON_FAILURE)
+    case 'Fail':
+        if (Detail.toString() == 'Lelang Tidak Ditemukan') {
+            Mobile.verifyElementNotVisible(findTestObject('Lelang/BarLelang'), 5, FailureHandling.STOP_ON_FAILURE)
+
+            break
+        }
 }
 

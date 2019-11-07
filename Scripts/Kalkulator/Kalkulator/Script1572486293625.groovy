@@ -31,29 +31,47 @@ if (varPeriode == '12') {
     Mobile.tapAtPosition(924, 584)
 }
 
-Mobile.setText(findTestObject('Kalkulator/UangMuka'), UangMuka, 0)
+Mobile.setText(findTestObject('Kalkulator/UangMukaRP'), UangMukaRp, 0)
 
-Mobile.tap(findTestObject('Kalkulator/DropDownAreaPengajuan'), 0)
+if (Mobile.verifyElementVisible(findTestObject('Kalkulator/MinimalUangMuka'), 3, FailureHandling.OPTIONAL)) {
+    Mobile.setText(findTestObject('Kalkulator/UangMuka'), UangMukaPersen, 0)
 
-Mobile.tap(findTestObject('Kalkulator/Click', [('text') : varAreaPengajuan]), 0)
+    Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+} else {
+    Mobile.tap(findTestObject('Kalkulator/DropDownAreaPengajuan'), 0)
 
-CustomKeywords.'ScrollUpDown.UpDown'(86, 2185, 86, 2185)
+    Mobile.tap(findTestObject('Kalkulator/Click', [('text') : varAreaPengajuan]), 0)
 
-Mobile.tap(findTestObject('Kalkulator/DropDownCabang'), 0)
+    CustomKeywords.'ScrollUpDown.UpDown'(86, 2185, 86, 2185)
 
-Mobile.tap(findTestObject('Kalkulator/Click', [('text') : varCabang]), 0)
+    Mobile.tap(findTestObject('Kalkulator/DropDownCabang'), 0)
 
-if (varPembayaran == 'Tunai') {
-    Mobile.checkElement(findTestObject('Kalkulator/CheckBoxTunai'), 0)
-} else if (varPembayaran == 'Kredit') {
-    Mobile.checkElement(findTestObject('Kalkulator/CheckBoxKredit'), 0)
+    Mobile.tap(findTestObject('Kalkulator/Click', [('text') : varCabang]), 0)
+
+    'Jenis Pembayaran'
+    if (varPembayaran == 'Tunai') {
+        Mobile.checkElement(findTestObject('Kalkulator/CheckBoxTunai'), 0)
+    } else if (varPembayaran == 'Kredit') {
+        Mobile.checkElement(findTestObject('Kalkulator/CheckBoxKredit'), 0)
+    }
+    
+    if (varCreditProtection == 'Ya') {
+        Mobile.checkElement(findTestObject('Kalkulator/CheckBoxCreditProtection'), 0)
+    } else if (varCreditProtection == 'Tidak') {
+        Mobile.uncheckElement(findTestObject('Kalkulator/CheckBoxCreditProtection'), 0)
+    }
+    
+    Mobile.pressBack()
 }
 
-if (varCreditProtection == 'Ya') {
-    Mobile.checkElement(findTestObject('Kalkulator/CheckBoxCreditProtection'), 0)
-} else if (varCreditProtection == 'Tidak') {
-    Mobile.uncheckElement(findTestObject('Kalkulator/CheckBoxCreditProtection'), 0)
+switch ('Result') {
+    case 'Pass':
+        Mobile.pressBack()
+    case 'Fail':
+        if (Detail.toString() == 'Uang Muka Harus 20%') {
+            Mobile.pressBack()
+        }
+        
+        break
 }
-
-Mobile.pressBack()
 

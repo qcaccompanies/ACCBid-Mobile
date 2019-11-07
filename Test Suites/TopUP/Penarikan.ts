@@ -36,5 +36,23 @@
          <value>Bank</value>
          <variableId>a55e6b03-db73-4772-ade3-13e20c2706b0</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>OTP</value>
+         <variableId>44c94f84-3ab8-4015-bc72-7c7950127bb9</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Result</value>
+         <variableId>57bdbdd9-06d8-466e-92fa-1f5b41587b43</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Detail</value>
+         <variableId>993a2396-4ae6-4b32-99a0-c4d0d76d872d</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

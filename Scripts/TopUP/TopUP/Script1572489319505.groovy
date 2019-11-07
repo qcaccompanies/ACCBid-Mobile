@@ -29,17 +29,38 @@ Mobile.tap(findTestObject('TopUP/DropDownBank'), 0)
 
 Mobile.tap(findTestObject('Kalkulator/Click', [('text') : varBank]), 0)
 
-Mobile.tap(findTestObject('TopUP/BtnLanjut'), 0)
+if (Mobile.verifyElementVisible(findTestObject('TopUP/NotifKelipatan'), 3, FailureHandling.OPTIONAL)) {
+    Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('TopUP/Btn_View'), 0)
+    Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
+} else {
+    Mobile.tap(findTestObject('TopUP/BtnLanjut'), 0)
 
-Mobile.tap(findTestObject('TopUP/CloseBtn'), 0)
+    Mobile.tap(findTestObject('TopUP/Btn_View'), 0)
 
-Mobile.tap(findTestObject('TopUP/BankTransferDrop'), 0)
+    Mobile.tap(findTestObject('TopUP/CloseBtn'), 0)
 
-Mobile.tap(findTestObject('TopUP/BCAPaymentButton'), 0)
+    Mobile.tap(findTestObject('TopUP/BankTransferDrop'), 0)
 
-CustomKeywords.'ScrollUpDown.UpDown'(52, 1891, 52, 1891)
+    Mobile.tap(findTestObject('TopUP/BCAPaymentButton'), 0)
 
-Mobile.pressHome()
+    CustomKeywords.'ScrollUpDown.UpDown'(52, 1891, 52, 1891)
+
+    Mobile.pressHome()
+
+    Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
+}
+
+switch ('Result') {
+    case 'Pass':
+        Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0)
+
+        break
+    case 'Fail':
+        break
+        
+        if (Detail.toString() == 'Top Up Harus Kelipatan 500Ribu') {
+            Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0)
+        }
+}
 

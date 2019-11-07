@@ -21,9 +21,46 @@ Mobile.tap(findTestObject('TopUP/Penarikan/Btn_Penarikan'), 0)
 
 Mobile.setText(findTestObject('TopUP/Penarikan/Nominal'), Nominal, 0)
 
-Mobile.tap(findTestObject('TopUP/Penarikan/DropDownBank'), 0)
+if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUpKelipatan'), 3, FailureHandling.OPTIONAL)) {
+    Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+} else {
+    Mobile.tap(findTestObject('TopUP/Penarikan/DropDownBank'), 0)
 
-Mobile.tap(findTestObject('Kalkulator/Click', [('text') : Bank]), 0)
+    Mobile.tap(findTestObject('Kalkulator/Click', [('text') : Bank]), 0)
 
-Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+    Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+
+    if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUPPenarikanMelibihiSaldo'), 3, FailureHandling.OPTIONAL)) {
+        Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 3, FailureHandling.OPTIONAL)
+    } else {
+        Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+
+        Mobile.setText(findTestObject('TopUP/Penarikan/KodeOTP'), OTP, 0)
+
+        Mobile.tap(findTestObject('TopUP/Penarikan/ButonOkay'), 0)
+    }
+}
+
+switch ('Result') {
+    case 'Pass':
+        Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+
+        break
+    case 'Fail':
+        break
+        
+        if (Detail.toString() == 'No Saldo') {
+            Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+        }
+        
+        if (Detail.toString() == 'Kelipatan Harus 500K') {
+            Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+        }
+        
+        if (Detail.toString() == 'OTP salah') {
+            Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+
+            break
+        }
+}
 
