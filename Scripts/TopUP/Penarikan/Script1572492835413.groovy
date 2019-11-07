@@ -31,13 +31,19 @@ if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUpKelipatan')
     Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
 
     if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUPPenarikanMelibihiSaldo'), 3, FailureHandling.OPTIONAL)) {
-        Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 3, FailureHandling.OPTIONAL)
+        Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 3, FailureHandling.OPTIONAL)
     } else {
-        Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
-
         Mobile.setText(findTestObject('TopUP/Penarikan/KodeOTP'), OTP, 0)
 
-        Mobile.tap(findTestObject('TopUP/Penarikan/ButonOkay'), 0)
+        Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Verifikasi'), 0)
+
+        if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/KodeVerifikasiSalah'), 3, FailureHandling.OPTIONAL)) {
+            Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Verifikasi'), 3, FailureHandling.OPTIONAL)
+        } else {
+            Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Verifikasi'), 0)
+
+            Mobile.tap(findTestObject('TopUP/Penarikan/ButonOkay'), 0)
+        }
     }
 }
 
