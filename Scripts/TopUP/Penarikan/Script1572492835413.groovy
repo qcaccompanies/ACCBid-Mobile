@@ -40,8 +40,6 @@ if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUpKelipatan')
         if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/KodeVerifikasiSalah'), 3, FailureHandling.OPTIONAL)) {
             Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Verifikasi'), 3, FailureHandling.OPTIONAL)
         } else {
-            Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Verifikasi'), 0)
-
             Mobile.tap(findTestObject('TopUP/Penarikan/ButonOkay'), 0)
         }
     }

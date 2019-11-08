@@ -35,7 +35,7 @@ Mobile.setText(findTestObject('Filter/Tahun(Min)'), Tahun_MIN, 0)
 
 Mobile.setText(findTestObject('Filter/Tahun(Max)'), Tahun_MAX, 0)
 
-CustomKeywords.'mobile.Slider.Slided'(findTestObject('Filter/Circle2'), 10, FailureHandling.STOP_ON_FAILURE)
+CustomKeywords.'mobile.Slider.Slided'(findTestObject('Filter/Harga'), 20, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('Filter/JarakTempuhSlider'), 0)
 
