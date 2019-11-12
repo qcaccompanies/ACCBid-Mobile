@@ -13,14 +13,14 @@
    <testCaseLink>
       <guid>2c69c445-f645-485f-a5cf-e3ac1ad3eefc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Task 18 (Kritik dan Saran)</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>3a143dbd-248f-4c91-9af0-0552a5c24895</id>
          <iterationEntity>
-            <iterationType>SPECIFIC</iterationType>
-            <value>3</value>
+            <iterationType>RANGE</iterationType>
+            <value>1-2</value>
          </iterationEntity>
          <testDataId>Data Files/task 18</testDataId>
       </testDataLink>
@@ -40,7 +40,7 @@
    <testCaseLink>
       <guid>7e9de925-3b7b-45fa-9765-05b56b04a84a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Task 19 (Laporkan Bug)</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
