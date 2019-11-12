@@ -30,7 +30,7 @@ if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUpKelipatan')
 
     Mobile.tap(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
 
-    if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUPPenarikanMelibihiSaldo'), 3, FailureHandling.OPTIONAL)) {
+    if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUPPenarikanMelibihiSaldo'), 3, FailureHandling.STOP_ON_FAILURE)) {
         Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 3, FailureHandling.OPTIONAL)
     } else {
         Mobile.setText(findTestObject('TopUP/Penarikan/KodeOTP'), OTP, 0)
@@ -51,8 +51,6 @@ switch ('Result') {
 
         break
     case 'Fail':
-        break
-        
         if (Detail.toString() == 'No Saldo') {
             Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
         }
@@ -66,5 +64,13 @@ switch ('Result') {
 
             break
         }
+        
+        if (Detail.toString() == 'Nominal Harus Diisi') {
+            Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/BTN_Lanjut'), 0)
+
+            break
+        }
+        
+        break
 }
 

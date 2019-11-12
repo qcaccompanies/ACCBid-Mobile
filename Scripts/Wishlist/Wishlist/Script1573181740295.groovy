@@ -15,13 +15,58 @@ import internal.GlobalVariable as GlobalVariable
 
 Mobile.startApplication('C:/Users/Marvin/Documents/GitHub/ACCBid-Mobile/accbid.apk', false)
 
-if (Mobile.verifyElementText(findTestObject('Wishlist/BID1'), BIDDING, FailureHandling.STOP_ON_FAILURE)) {
+if (Mobile.verifyElementText(findTestObject('Wishlist/BID1'), BIDDING, FailureHandling.OPTIONAL)) {
     Mobile.tap(findTestObject('Wishlist/BID1'), 0)
-} else if (Mobile.verifyElementText(findTestObject('Wishlist/BID2'), BIDDING, FailureHandling.STOP_ON_FAILURE)) {
+} else if (Mobile.verifyElementText(findTestObject('Wishlist/BID2'), BIDDING, FailureHandling.OPTIONAL)) {
     Mobile.tap(findTestObject('Wishlist/BID2'), 0)
 } else if (Mobile.verifyElementText(findTestObject('Wishlist/BID3'), BIDDING, FailureHandling.STOP_ON_FAILURE)) {
     Mobile.tap(findTestObject('Wishlist/BID3'), 0)
 }
 
-Mobile.tap(findTestObject(null), 0)
+Mobile.tap(findTestObject('Wishlist/AddWishList'), 0)
+
+Mobile.pressBack()
+
+Mobile.tap(findTestObject('Wishlist/Btn_Wishlist'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Wishlist/TextWishList'), 0)
+
+if (Urutkan == 'Harga Tertinggi') {
+    Mobile.tap(findTestObject('Wishlist/HargaTertinggi'), 0)
+} else if (Urutkan == 'Harga Terendah') {
+    Mobile.tap(findTestObject('Wishlist/HargaTerendah'), 0)
+} else if (Urutkan == 'Waktu Berakhir') {
+    Mobile.tap(findTestObject('Wishlist/WaktuBerakhir'), 0)
+}
+
+Mobile.delay(2)
+
+if (LelangTerbuka == 'true') {
+    Mobile.checkElement(findTestObject('Wishlist/LelangTerbuka'), 0)
+}
+
+if (LelangTertutup == 'true') {
+    Mobile.checkElement(findTestObject('Wishlist/LelangTertutup'), 0)
+}
+
+if (SedangBerlangsung == 'true') {
+    Mobile.checkElement(findTestObject('Wishlist/SedangBerlangsung'), 0)
+}
+
+if (AkanDatang == 'true') {
+    Mobile.checkElement(findTestObject('Wishlist/AkanDatang'), 0)
+}
+
+Mobile.tap(findTestObject('Wishlist/BtnApply'), 0)
+
+switch ('Result') {
+    case 'Pass':
+        Mobile.verifyElementVisible(findTestObject('Wishlist/BtnApply'), 0)
+    case 'Fail':
+        if (Detail.toString() == 'Lelang Tidak Ada') {
+            Mobile.verifyElementVisible(findTestObject('Wishlist/BtnApply'), 0)
+        }
+        
+        break
+}
 

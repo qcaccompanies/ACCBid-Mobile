@@ -19,8 +19,8 @@
          <combinationType>ONE</combinationType>
          <id>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>5</value>
          </iterationEntity>
          <testDataId>Data Files/TopUP/Penarikan</testDataId>
       </testDataLink>
