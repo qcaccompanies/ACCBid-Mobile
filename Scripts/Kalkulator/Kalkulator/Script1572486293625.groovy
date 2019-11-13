@@ -12,23 +12,25 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
-Mobile.startApplication('C:/Users/Marvin/git/ACCBid-Mobile/accbid.apk', false)
+Mobile.startApplication('C:\\Users\\15421\\git\\ACCBid-Mobile2\\accbid.apk', false)
 
 Mobile.tap(findTestObject('Kalkulator/BTN_Kalkulator'), 0)
 
 Mobile.setText(findTestObject('Kalkulator/HargaUnit'), HargaUnit, 0)
 
 if (varPeriode == '12') {
-    Mobile.tapAtPosition(63, 584)
+    CustomKeywords.'mobile.Slider.Slided'(findTestObject('Object Repository/Kalkulator/PeriodeSlider'), 0, FailureHandling.OPTIONAL)
 } else if (varPeriode == '24') {
-    Mobile.tapAtPosition(275, 584)
+    CustomKeywords.'mobile.Slider.Slided'(findTestObject('Object Repository/Kalkulator/PeriodeSlider'), 0.25, FailureHandling.OPTIONAL)
 } else if (varPeriode == '36') {
-    Mobile.tapAtPosition(490, 584)
+    CustomKeywords.'mobile.Slider.Slided'(findTestObject('Object Repository/Kalkulator/PeriodeSlider'), 0.5, FailureHandling.OPTIONAL)
 } else if (varPeriode == '48') {
-    Mobile.tapAtPosition(708, 584)
+    CustomKeywords.'mobile.Slider.Slided'(findTestObject('Object Repository/Kalkulator/PeriodeSlider'), 0.75, FailureHandling.OPTIONAL)
 } else if (varPeriode == '60') {
-    Mobile.tapAtPosition(924, 584)
+    CustomKeywords.'mobile.Slider.Slided'(findTestObject('Object Repository/Kalkulator/PeriodeSlider'), 1, FailureHandling.OPTIONAL)
 }
 
 Mobile.setText(findTestObject('Kalkulator/UangMukaRP'), UangMukaRp, 0)
