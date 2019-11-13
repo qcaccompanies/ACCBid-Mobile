@@ -12,6 +12,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 Mobile.startApplication('C:/Users/Marvin/git/ACCBid-Mobile/accbid.apk', false)
 
@@ -21,46 +23,77 @@ Mobile.getDeviceWidth()
 
 Mobile.tap(findTestObject('TopUP/BTN_Deposit'), 0)
 
-Mobile.tap(findTestObject('TopUP/Btn_TopUP'), 0)
+if (JenisLelang == 'Astria') {
+    Mobile.tap(findTestObject('TopUP/Btn_TopUP'), 0)
 
-Mobile.setText(findTestObject('TopUP/InputNominal'), varTopUP, 0)
+    CustomKeywords.'Swipers.horizontalswipe'()
 
-Mobile.tap(findTestObject('TopUP/DropDownBank'), 0)
+    CustomKeywords.'Swipers.horizontalswipe'()
 
-Mobile.tap(findTestObject('Kalkulator/Click', [('text') : varBank]), 0)
-
-if (Mobile.verifyElementVisible(findTestObject('TopUP/NotifKelipatan'), 3, FailureHandling.OPTIONAL)) {
-    Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0, FailureHandling.STOP_ON_FAILURE)
-
-    Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
-} else {
-    Mobile.tap(findTestObject('TopUP/BtnLanjut'), 0)
-
-    Mobile.tap(findTestObject('TopUP/Btn_View'), 0)
-
-    Mobile.tap(findTestObject('TopUP/CloseBtn'), 0)
-
-    Mobile.tap(findTestObject('TopUP/BankTransferDrop'), 0)
-
-    Mobile.tap(findTestObject('TopUP/BCAPaymentButton'), 0)
-
-    CustomKeywords.'ScrollUpDown.UpDown'(52, 1891, 52, 1891)
-
-    Mobile.pressHome()
-
-    Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
-}
-
-switch ('Result') {
-    case 'Pass':
-        Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0)
-
-        break
-    case 'Fail':
-        break
-        
-        if (Detail.toString() == 'Top Up Harus Kelipatan 500Ribu') {
+    switch ('Result') {
+        case 'Pass':
             Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0)
-        }
+
+            break
+        case 'Fail':
+            break
+            
+            if (Detail.toString() == 'Top Up Harus Kelipatan 500Ribu') {
+                Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0)
+            }
+    }
+    
+    Mobile.setText(findTestObject('TopUP/InputNominal'), varTopUP, 0)
+
+    Mobile.tap(findTestObject('TopUP/DropDownBank'), 0)
+
+    Mobile.tap(findTestObject('Kalkulator/Click', [('text') : varBank]), 0)
+
+    if (Mobile.verifyElementVisible(findTestObject('TopUP/NotifKelipatan'), 3, FailureHandling.OPTIONAL)) {
+        Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
+    } else {
+        Mobile.tap(findTestObject('TopUP/BtnLanjut'), 0)
+
+        Mobile.tap(findTestObject('TopUP/Btn_View'), 0)
+
+        Mobile.tap(findTestObject('TopUP/CloseBtn'), 0)
+
+        Mobile.tap(findTestObject('TopUP/BankTransferDrop'), 0)
+
+        Mobile.tap(findTestObject('TopUP/BCAPaymentButton'), 0)
+
+        CustomKeywords.'ScrollUpDown.UpDown'(52, 1891, 52, 1891)
+
+        Mobile.pressHome()
+
+        Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
+    }
+} else if (JenisLelang == 'IBID') {
+    CustomKeywords.'Swipers.horizontalswipe'(0, 277, 280)
+
+    Mobile.tap(findTestObject('TopUP/TopUPIBID/Top UP IBID'), 0)
+
+    Mobile.setText(findTestObject('TopUP/TopUPIBID/NominalTopUPIBID'), '500000', 0)
+
+    Mobile.tap(findTestObject('TopUP/TopUPIBID/Bank'), 0)
+
+    Mobile.tap(findTestObject('TopUP/TopUPIBID/BankBar', [('text') : varBank]), 0)
+
+    Mobile.tap(findTestObject('TopUP/TopUPIBID/DatePicker'), 0)
+
+    switch ('Result') {
+        case 'Pass':
+            Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0)
+
+            break
+        case 'Fail':
+            break
+            
+            if (Detail.toString() == 'Top Up Harus Kelipatan 500Ribu') {
+                Mobile.verifyElementVisible(findTestObject('TopUP/BtnLanjut'), 0)
+            }
+    }
 }
 
