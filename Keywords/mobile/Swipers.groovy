@@ -1,4 +1,6 @@
 
+package mobile
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -19,8 +21,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
 
 import internal.GlobalVariable
-import io.appium.java_client.AppiumDriver
-import java.awt.Dimension
+
 import MobileBuiltInKeywords as Mobile
 import WSBuiltInKeywords as WS
 import WebUiBuiltInKeywords as WebUI
@@ -44,18 +45,65 @@ import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 
 
 class Swipers {
-	
-	AppiumDriver driver;
-	
+	/**
+	 * Check if element present in timeout
+	 * @param to Katalon test object
+	 * @param timeout time to wait for element to show up
+	 * @return true if element present, otherwise false
+	 */
 	@Keyword
-	public void horizontalswipe(int startX, int y, int endX){
-		Dimension dim = driver.manage().window().getSize();
-		int height = dim.getHeight();
-		int width = dim.getWidth();
-		y = (int)(height*0.20);
-		startX = (int)(width*0.75);
-		endX = (int)(width*0.35);
-		Mobile.swipe(startX, y, endX, 500)
+	def UpDown(float start , float end, int xPosition = Mobile.getDeviceWidth() / 2){
+		try {
+			def device_Height = Mobile.getDeviceHeight()
+
+			KeywordUtil.logInfo("Device Height : " + device_Height)
+
+			KeywordUtil.logInfo("Device Width : " + Mobile.getDeviceWidth())
+
+			int startX = xPosition
+
+			int endX = startX
+
+			int startY = device_Height * start
+			KeywordUtil.logInfo("Swipe start at Height : " + startY)
+			int endY = device_Height * end
+			KeywordUtil.logInfo("Swipe end at Height : " + endY)
+
+			KeywordUtil.logInfo("X Position : " + xPosition)
+
+			Mobile.swipe(startX, startY, endX, endY)
+		} catch (Exception e) {
+			KeywordUtil.markFailed("Something wrong with the keyword" + e.message)
+		}
 	}
-	
+
+	/**
+	 * Get mobile driver for current session
+	 * @return mobile driver for current session
+	 */
+	@Keyword
+	def RightLeft(float start , float end, int yPosition = Mobile.getDeviceHeight() / 2){
+		try {
+			def device_Width = Mobile.getDeviceWidth()
+
+			KeywordUtil.logInfo("Device Height : " + Mobile.getDeviceHeight())
+
+			KeywordUtil.logInfo("Device Width : " + device_Width)
+
+			int startY = yPosition
+
+			int endY = startY
+
+			int startX = device_Width * start
+			KeywordUtil.logInfo("Swipe start at Width : " + startX)
+			int endX = device_Width * end
+			KeywordUtil.logInfo("Swipe end at Witdh : " + endX)
+
+			KeywordUtil.logInfo("Y Position : " + yPosition)
+
+			Mobile.swipe(startX, startY, endX, endY)
+		} catch (Exception e) {
+			KeywordUtil.markFailed("Something wrong with the keyword" + e.message)
+		}
+	}
 }

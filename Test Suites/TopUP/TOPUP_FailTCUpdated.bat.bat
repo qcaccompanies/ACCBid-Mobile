@@ -1,1 +1,1 @@
-katalon -noSplash  -runMode=console -projectPath="C:\Users\Marvin\Documents\GitHub\ACCBid-Mobile\ACCBid.prj" -retry=0 -testSuitePath="Test Suites/TopUP/TOPUP_20191106_111957" -executionProfile="default" -browserType="Android"
+katalon -noSplash  -runMode=console -projectPath="C:\Users\Marvin\Documents\GitHub\ACCBid-Mobile\ACCBid.prj" -retry=0 -testSuitePath="Test Suites/TopUP/TOPUP_20191114_125649" -executionProfile="default" -browserType="Android"
