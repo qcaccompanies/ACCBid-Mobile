@@ -19,8 +19,8 @@
          <combinationType>ONE</combinationType>
          <id>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</id>
          <iterationEntity>
-            <iterationType>SPECIFIC</iterationType>
-            <value>5</value>
+            <iterationType>RANGE</iterationType>
+            <value>6-9</value>
          </iterationEntity>
          <testDataId>Data Files/TopUP/Penarikan</testDataId>
       </testDataLink>
@@ -53,6 +53,12 @@
          <type>DATA_COLUMN</type>
          <value>Detail</value>
          <variableId>993a2396-4ae6-4b32-99a0-c4d0d76d872d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JenisPenarikan</value>
+         <variableId>e4a435cb-ad7a-4b5e-91b1-e23f6af6d5ff</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

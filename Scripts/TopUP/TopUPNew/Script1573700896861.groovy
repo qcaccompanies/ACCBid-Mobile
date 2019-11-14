@@ -26,6 +26,8 @@ Mobile.tap(findTestObject('TopUP/BTN_Deposit'), 0)
 if (JenisLelang == 'Astria') {
     Mobile.tap(findTestObject('TopUP/Btn_TopUP'), 0)
 
+    CustomKeywords.'com.katalon.jmeter.JMeterKeyword.createSampler'(null)
+
     Mobile.setText(findTestObject('TopUP/InputNominal'), varTopUP, 0)
 
     Mobile.tap(findTestObject('TopUP/DropDownBank'), 0)
