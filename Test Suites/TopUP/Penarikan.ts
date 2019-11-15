@@ -19,7 +19,7 @@
          <combinationType>ONE</combinationType>
          <id>478a6d26-f751-4d95-8525-9c9a8aa5e5c7</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
+            <iterationType>ALL</iterationType>
             <value>6-9</value>
          </iterationEntity>
          <testDataId>Data Files/TopUP/Penarikan</testDataId>
