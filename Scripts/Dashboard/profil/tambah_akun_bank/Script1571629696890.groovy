@@ -90,5 +90,3 @@ switch (expected.toString()) {
         break
 }
 
-Mobile.pressHome()
-
