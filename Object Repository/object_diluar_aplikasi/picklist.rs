@@ -7,7 +7,8 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@class = 'android.widget.TextView' and (contains(text(), '${text}') or contains(., '${text}'))]</value>
+         <value>//*[@class = 'android.widget.viewView
+' and (contains(text(), '${text}') or contains(., '${text}'))]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,7 +18,8 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>android.widget.TextView</value>
+      <value>android.widget.viewView
+</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
