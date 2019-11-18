@@ -4,27 +4,29 @@ import com.detroitlabs.katalonmobileutil.testobject.XPathBuilder as XPathBuilder
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
 
-Mobile.tap(findTestObject('ubah profil/ubahprofil_InpTanggalLahir'), 0)
+Mobile.tap(findTestObject('ubah profil/ProfilSaya_TxtTahun'), 0)
 
-ArrayList listElement = MobileDriverFactory.getDriver().findElementsByClassName('android.widget.TextView')
+driver = MobileDriverFactory.getDriver()
 
-i = (listElement.size() - 1)
+String xpath = ''
 
-String textItem = listElement[i].getText()
+xpath = XPathBuilder.createXPath('TextView')
 
-if (textItem < varTahun) {
-    varScrollUpDown = 'UP'
+List<RemoteWebElement> listElements = ((driver.findElementsByXPath(xpath)) as List<RemoteWebElement>)
+
+if (listElements[(listElements.size() - 1)].getText() < varTahun) {
+    varScrollUpDown = 'DownToUp'
 } else {
-    varScrollUpDown = 'DOWN'
+    varScrollUpDown = 'UpToDown'
 }
 
 switch (varScrollUpDown.toString()) {
-    case 'UP':
-        CustomKeywords.'mobile.swiping.scrollListToElementWithTextUp'(varTahun)
+    case 'UpToDown':
+        CustomKeywords.'mobile.swiping.scrollListToElementWithTextUpToDown'(varTahun)
 
         break
-    case 'DOWN':
-        CustomKeywords.'mobile.swiping.scrollListToElementWithTextDown'(varTahun)
+    case 'DownToUp':
+        CustomKeywords.'mobile.swiping.scrollListToElementWithTextDownToUp'(varTahun)
 
         break
 }
