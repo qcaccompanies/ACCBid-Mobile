@@ -90,3 +90,5 @@ switch (expected.toString()) {
         break
 }
 
+Mobile.pressBack()
+
