@@ -22,6 +22,22 @@ Mobile.tap(findTestObject('TopUP/BTN_Deposit'), 0)
 if (JenisPenarikan == 'Astria') {
     Mobile.tap(findTestObject('TopUP/Penarikan/Btn_Penarikan'), 0)
 
+    Mobile.startApplication('C:\\Users\\ASUS\\git\\ACCBid-Mobile\\accbid.apk', true)
+
+    Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
+
+    Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View57'), 0)
+
+    Mobile.pressBack()
+
+    Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View35'), 0)
+
+    Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View40'), 0)
+
+    Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View35'), 0)
+
+    Mobile.closeApplication()
+
     Mobile.setText(findTestObject('TopUP/Penarikan/Nominal'), Nominal, 0)
 
     if (Mobile.verifyElementVisible(findTestObject('TopUP/Penarikan/PopUpKelipatan'), 3, FailureHandling.OPTIONAL)) {
