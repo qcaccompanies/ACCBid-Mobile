@@ -13,8 +13,8 @@
    <testCaseLink>
       <guid>2c69c445-f645-485f-a5cf-e3ac1ad3eefc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Task 18 (Kritik dan Saran)</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Christi/Task 18 (Kritik dan Saran)</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>3a143dbd-248f-4c91-9af0-0552a5c24895</id>
@@ -22,7 +22,7 @@
             <iterationType>RANGE</iterationType>
             <value>1-2</value>
          </iterationEntity>
-         <testDataId>Data Files/task 18</testDataId>
+         <testDataId>Data Files/kritik_saran/task 18</testDataId>
       </testDataLink>
       <variableLink>
          <testDataLinkId>3a143dbd-248f-4c91-9af0-0552a5c24895</testDataLinkId>
@@ -41,7 +41,7 @@
       <guid>7e9de925-3b7b-45fa-9765-05b56b04a84a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Task 19 (Laporkan Bug)</testCaseId>
+      <testCaseId>Test Cases/Christi/Task 19 (Laporkan Bug)</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>afc2193b-89c5-4e18-a150-0467debfbeb1</id>
@@ -49,7 +49,7 @@
             <iterationType>ALL</iterationType>
             <value></value>
          </iterationEntity>
-         <testDataId>Data Files/task 19</testDataId>
+         <testDataId>Data Files/Laporkan Bug/task 19</testDataId>
       </testDataLink>
       <variableLink>
          <testDataLinkId>afc2193b-89c5-4e18-a150-0467debfbeb1</testDataLinkId>
@@ -62,6 +62,39 @@
          <type>DATA_COLUMN</type>
          <value>expected</value>
          <variableId>f4e9a301-f52d-4abd-b2e5-8c43d9eef73e</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e8f00f20-334c-4732-ba52-1f84ba8f48f7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Christi/Task 22 Notifikasi</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>fcc64e3b-a166-4a72-814a-c6cd26e9bd2d</id>
+         <iterationEntity>
+            <iterationType>RANGE</iterationType>
+            <value>1-4</value>
+         </iterationEntity>
+         <testDataId>Data Files/notifikasi/task 22</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>fcc64e3b-a166-4a72-814a-c6cd26e9bd2d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>cek_input</value>
+         <variableId>04f778d1-bcaa-4ae3-beca-f746cff8cced</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>41a6defb-4f0e-47df-b4d5-f6db2b842b1c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>002673ea-2cff-4041-b1e7-5511ea6654c7</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
