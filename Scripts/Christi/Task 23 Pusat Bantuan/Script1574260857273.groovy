@@ -16,22 +16,48 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(7)
+Mobile.delay(7, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
 
-WebUI.delay(3)
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Page_Notifikasi/android.view.View59'), 0)
+Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View59'), 0)
 
-WebUI.delay(3)
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View40'), 0)
+Mobile.tap(findTestObject('Page_Pusat Bantuan/input.PertanyaanPusatBantuan'), 0)
 
-WebUI.delay(3)
+Mobile.clearText(findTestObject('Page_Pusat Bantuan/input.PertanyaanPusatBantuan'), 0)
 
-WebUI.verifyElementAttributeValue(findTestObject('Page_Pusat Bantuan/android.view.View35'), 'value', 'Siapa sajakah yang dapat melakukan penawaran di BidMart', 
+Mobile.setText(findTestObject('Page_Pusat Bantuan/input.PertanyaanPusatBantuan', [('variable') : search_text]), search_text, 
     0)
+
+switch (expected.toString()) {
+    case 'pass':
+        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.tap(findTestObject('Page_Pusat Bantuan/login_see more'), 0)
+
+        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+        Mobile.tap(findTestObject('Page_Pusat Bantuan/login_see more'), 0)
+
+        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+        break
+    case 'fail':
+        WebUI.delay(3)
+
+        Mobile.verifyElementNotExist(findTestObject('Page_Pusat Bantuan/login_see more'), 0)
+
+        not_run: WebUI.verifyElementAttributeValue(findTestObject('Page_Pusat Bantuan/login_set text'), 'value', search_text, 
+            0)
+
+        break
+}
+
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.closeApplication()
 

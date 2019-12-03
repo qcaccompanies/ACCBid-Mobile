@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 Mobile.startApplication('C:\\Users\\ASUS\\git\\ACCBid-Mobile\\accbid.apk', true)
 
-Mobile.tap(findTestObject('Kritik Saran/android.view.View187'), 0)
+Mobile.tap(findTestObject('null'), 0)
 
 Mobile.closeApplication()
 

@@ -22,11 +22,11 @@ Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('Kritik Saran/android.view.View187'), 0)
+Mobile.tap(findTestObject('Kritik Saran/android.view.View66'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('ACC Bid/android.view.menu.input.Kritik'), 0)
+Mobile.tap(findTestObject('Kritik Saran/see kritik saran produk'), 0)
 
 WebUI.delay(3)
 

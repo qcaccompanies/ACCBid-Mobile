@@ -67,7 +67,7 @@
    <testCaseLink>
       <guid>e8f00f20-334c-4732-ba52-1f84ba8f48f7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Christi/Task 22 Notifikasi</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
@@ -95,6 +95,33 @@
          <type>DEFAULT</type>
          <value></value>
          <variableId>002673ea-2cff-4041-b1e7-5511ea6654c7</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d6252060-f880-44d4-8767-4f448960a906</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Christi/Task 23 Pusat Bantuan</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>69382ca0-a008-40db-a5f7-73396d130800</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/pusat bantuan/task 23</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>69382ca0-a008-40db-a5f7-73396d130800</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>search_text</value>
+         <variableId>799d2e6b-6de2-4c90-955d-990a4842cdca</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69382ca0-a008-40db-a5f7-73396d130800</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>a5733ab0-1fc6-4385-b5e5-bffe7d4f70c6</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
