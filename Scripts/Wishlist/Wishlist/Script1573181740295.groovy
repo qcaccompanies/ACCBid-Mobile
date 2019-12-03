@@ -29,7 +29,7 @@ Mobile.pressBack()
 
 Mobile.tap(findTestObject('Wishlist/Btn_Wishlist'), 0)
 
-Mobile.tap(findTestObject('Wishlist/ButtonFilterUrutkan'), 0)
+Mobile.waitForElementPresent(findTestObject('Wishlist/TextWishList'), 0)
 
 if (Urutkan == 'Harga Tertinggi') {
     Mobile.tap(findTestObject('Wishlist/HargaTertinggi'), 0)
