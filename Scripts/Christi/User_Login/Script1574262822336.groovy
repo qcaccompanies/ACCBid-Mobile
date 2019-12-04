@@ -17,27 +17,29 @@ Mobile.startApplication('C:\\Users\\ASUS\\git\\ACCBid-Mobile\\accbid.apk', true)
 
 WebUI.delay(15)
 
-Mobile.tap(findTestObject('Page_Login/menu.MasukAtauDaftar'), 0)
+if (Mobile.verifyElementVisible(findTestObject('Page_Login/menu.MasukAtauDaftar'), 0)) {
+    Mobile.tap(findTestObject('Page_Login/menu.MasukAtauDaftar'), 0)
 
-WebUI.delay(3)
+    WebUI.delay(3)
 
-Mobile.tap(findTestObject('Page_Login/menu.MasukAccBid'), 0)
+    Mobile.tap(findTestObject('Page_Login/menu.MasukAccBid'), 0)
 
-WebUI.delay(3)
+    WebUI.delay(3)
 
-Mobile.tap(findTestObject('Page_Login/input_emailNoHp'), 0)
+    Mobile.tap(findTestObject('Page_Login/input_emailNoHp'), 0)
 
-Mobile.setText(findTestObject('Page_Login/input_emailNoHp'), email, 3)
+    Mobile.setText(findTestObject('Page_Login/input_emailNoHp'), email, 3)
 
-WebUI.delay(3)
+    WebUI.delay(3)
 
-Mobile.tap(findTestObject('Page_Login/input_passwordLogin'), 0)
+    Mobile.tap(findTestObject('Page_Login/input_passwordLogin'), 0)
 
-Mobile.setText(findTestObject('Page_Login/input_passwordLogin'), password, 3)
+    Mobile.setText(findTestObject('Page_Login/input_passwordLogin'), password, 3)
 
-WebUI.delay(5)
+    WebUI.delay(5)
 
-Mobile.tap(findTestObject('Page_Login/btn.Masuk'), 0)
+    Mobile.tap(findTestObject('Page_Login/btn.Masuk'), 0)
 
-WebUI.delay(15)
+    WebUI.delay(15)
+}
 

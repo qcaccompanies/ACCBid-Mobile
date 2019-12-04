@@ -22,26 +22,25 @@ Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('Kritik Saran/android.view.View66'), 0)
+Mobile.tap(findTestObject('Kritik Saran/Kritik_Saran'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('Kritik Saran/see kritik saran produk'), 0)
+Mobile.tap(findTestObject('Kritik Saran/kritik saran produk'), 0)
 
 WebUI.delay(3)
 
 switch (expected.toString()) {
     case 'pass':
-        Mobile.setText(findTestObject('ACC Bid/android.widget.EditText0 - Kami ingin tahu bug yang mengganggu Anda. Menceritakan kronologi kejadian dapat membantu kami dalam memperbaiki pengalaman Anda di accbid.'), 
-            input_text, 0)
+        Mobile.setText(findTestObject('Kritik Saran/input text'), input_text, 0)
 
         WebUI.delay(3)
 
-        Mobile.tap(findTestObject('ACC Bid/android.widget.Button0'), 0)
+        Mobile.tap(findTestObject('Kritik Saran/btn submit'), 0)
 
         break
     case 'failed':
-        Mobile.tap(findTestObject('ACC Bid/android.widget.Button0'), 0)
+        Mobile.tap(findTestObject('Kritik Saran/btn submit'), 0)
 
         WebUI.delay(5)
 

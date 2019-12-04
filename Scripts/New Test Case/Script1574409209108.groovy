@@ -19,13 +19,13 @@ Mobile.tap(findTestObject('null'), 0)
 
 Mobile.closeApplication()
 
-Mobile.tap(findTestObject('Kritik Saran/android.view.View67 (1)'), 0)
+Mobile.tap(findTestObject('null'), 0)
 
-Mobile.tap(findTestObject('Kritik Saran/android.view.View33'), 0)
+Mobile.tap(findTestObject('null'), 0)
 
-Mobile.setText(findTestObject('Kritik Saran/android.widget.EditText0 - Testing'), ' testing', 0)
+Mobile.setText(findTestObject('null'), ' testing', 0)
 
-Mobile.tap(findTestObject('Kritik Saran/android.widget.Button0'), 0)
+Mobile.tap(findTestObject('null'), 0)
 
 Mobile.closeApplication()
 

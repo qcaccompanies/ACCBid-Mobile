@@ -9,6 +9,14 @@
          <key>BASIC</key>
          <value>//*[@class = 'android.view.View' and (text() = 'Akun' or . = 'Akun')]</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
