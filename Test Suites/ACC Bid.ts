@@ -13,14 +13,14 @@
    <testCaseLink>
       <guid>2c69c445-f645-485f-a5cf-e3ac1ad3eefc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Christi/Task 18 (Kritik dan Saran)</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>3a143dbd-248f-4c91-9af0-0552a5c24895</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
-            <value>1-2</value>
+            <iterationType>ALL</iterationType>
+            <value>1-1</value>
          </iterationEntity>
          <testDataId>Data Files/kritik_saran/task 18</testDataId>
       </testDataLink>
@@ -100,7 +100,7 @@
    <testCaseLink>
       <guid>d6252060-f880-44d4-8767-4f448960a906</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Christi/Task 23 Pusat Bantuan</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>

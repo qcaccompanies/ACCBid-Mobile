@@ -13,26 +13,30 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
+not_run: WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
     FailureHandling.STOP_ON_FAILURE)
+
+Mobile.startApplication('C:\\Users\\15420\\git\\ACCBid-Mobile99\\accbid.apk', false)
 
 WebUI.delay(15)
 
-Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
+not_run: Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
+
+Mobile.tap(findTestObject('akun'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('Kritik Saran/Kritik_Saran'), 0)
+Mobile.tap(findTestObject('thara/Kritik  Saran'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('Kritik Saran/kritik saran produk'), 0)
+Mobile.tap(findTestObject('thara/Kritik  Saran Produk'), 0)
 
 WebUI.delay(3)
 
 switch (expected.toString()) {
     case 'pass':
-        Mobile.setText(findTestObject('Kritik Saran/input text'), input_text, 0)
+        Mobile.setText(findTestObject('thara/textarea'), input_text, 0)
 
         WebUI.delay(3)
 
