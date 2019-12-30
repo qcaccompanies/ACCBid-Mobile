@@ -13,8 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
-    FailureHandling.STOP_ON_FAILURE)
+Mobile.startApplication('C:\\Users\\ASUS\\Desktop\\accbid(2).apk', false)
 
 WebUI.delay(15)
 

@@ -30,11 +30,11 @@ if (JenisPenarikan == 'Astria') {
 
     Mobile.pressBack()
 
-    Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View35'), 0)
+    Mobile.tap(findTestObject('null'), 0)
 
-    Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View40'), 0)
+    Mobile.tap(findTestObject('null'), 0)
 
-    Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View35'), 0)
+    Mobile.tap(findTestObject('null'), 0)
 
     Mobile.closeApplication()
 

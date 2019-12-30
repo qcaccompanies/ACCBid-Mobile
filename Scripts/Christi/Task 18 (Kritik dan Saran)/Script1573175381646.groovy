@@ -13,24 +13,19 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-not_run: WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
-    FailureHandling.STOP_ON_FAILURE)
-
-Mobile.startApplication('C:\\Users\\15420\\git\\ACCBid-Mobile99\\accbid.apk', false)
+Mobile.startApplication('C:\\Users\\ASUS\\Desktop\\accbid(2).apk', false)
 
 WebUI.delay(15)
 
-not_run: Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
-
-Mobile.tap(findTestObject('akun'), 0)
+Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('thara/Kritik  Saran'), 0)
+Mobile.tap(findTestObject('Kritik Saran/Kritik  Saran'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('thara/Kritik  Saran Produk'), 0)
+Mobile.tap(findTestObject('Kritik Saran/lihat kritik saran produk'), 0)
 
 WebUI.delay(3)
 

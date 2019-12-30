@@ -13,29 +13,3 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-Mobile.startApplication('C:\\Users\\ASUS\\git\\ACCBid-Mobile\\accbid.apk', false)
-
-WebUI.delay(15)
-
-CustomKeywords.'mobile.Swipers.UpDown'(0.9, 0.5, 270)
-
-WebUI.delay(3)
-
-CustomKeywords.'mobile.Swipers.RightLeft'(0.9, 0.5, 200)
-
-CustomKeywords.'mobile.Swipers.RightLeft'(0.9, 0.4, 200)
-
-WebUI.delay(3)
-
-Mobile.verifyElementVisible(findTestObject('ikut lelang/Lihat Semua Event Hari Ini'), 0)
-
-Mobile.tap(findTestObject('ikut lelang/Lihat Semua Event Hari Ini'), 0)
-
-WebUI.delay(3)
-
-CustomKeywords.'mobile.Swipers.UpDown'(0.9, 0.5, 270)
-
-Mobile.tap(findTestObject('ikut lelang/div lelang automated 2'), 0, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.delay(3)
-

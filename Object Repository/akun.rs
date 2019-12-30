@@ -10,12 +10,10 @@
          <value>//*[@class = 'android.view.View' and (text() = 'Akun' or . = 'Akun')]</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value></value>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -32,7 +30,7 @@
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>
-      <value>127</value>
+      <value>188</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

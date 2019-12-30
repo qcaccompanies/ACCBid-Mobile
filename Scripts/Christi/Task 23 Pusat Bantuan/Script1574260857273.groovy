@@ -13,51 +13,40 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
-    FailureHandling.STOP_ON_FAILURE)
+Mobile.startApplication('C:\\Users\\ASUS\\Desktop\\accbid(2).apk', false)
 
-Mobile.delay(7, FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(15, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
-
-Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View59'), 0)
+Mobile.tap(findTestObject('akun'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Page_Pusat Bantuan/input.PertanyaanPusatBantuan'), 0)
+Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View0 - Pusat Bantuan'), 0)
 
-Mobile.clearText(findTestObject('Page_Pusat Bantuan/input.PertanyaanPusatBantuan'), 0)
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.setText(findTestObject('Page_Pusat Bantuan/input.PertanyaanPusatBantuan', [('variable') : search_text]), search_text, 
-    0)
+Mobile.setText(findTestObject('Page_Pusat Bantuan/android.widget.EditText0 (2)'), search_text, 0)
+
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
 switch (expected.toString()) {
-    case 'pass':
-        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+    case 'pass`':
+        Mobile.verifyElementVisible(findTestObject('Page_Pusat Bantuan/android.view.View0 - Bagaimana cara melakukan Top Up'), 
+            3)
 
-        Mobile.tap(findTestObject('Page_Pusat Bantuan/login_see more'), 0)
-
-        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
-
-        Mobile.tap(findTestObject('Page_Pusat Bantuan/login_see more'), 0)
+        Mobile.tap(findTestObject('Page_Pusat Bantuan/android.view.View0 - Bagaimana cara melakukan Top Up'), 0)
 
         Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
         break
     case 'fail':
-        WebUI.delay(3)
-
-        Mobile.verifyElementNotExist(findTestObject('Page_Pusat Bantuan/login_see more'), 0)
-
-        not_run: WebUI.verifyElementAttributeValue(findTestObject('Page_Pusat Bantuan/login_set text'), 'value', search_text, 
+        Mobile.verifyElementNotVisible(findTestObject('Page_Pusat Bantuan/android.view.View0 - Bagaimana cara melakukan Top Up'), 
             0)
+
+        Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
         break
 }
-
-Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.closeApplication()
 
