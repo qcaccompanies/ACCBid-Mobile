@@ -100,7 +100,7 @@
    <testCaseLink>
       <guid>d6252060-f880-44d4-8767-4f448960a906</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Christi/Task 23 Pusat Bantuan</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
@@ -122,6 +122,45 @@
          <type>DATA_COLUMN</type>
          <value>expected</value>
          <variableId>a5733ab0-1fc6-4385-b5e5-bffe7d4f70c6</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>62291c50-e930-4ec6-a769-9c8b83fddf6d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Christi/Task Ikut Lelang Terbuka</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>85745226-c5de-4867-91db-149e3d7094e9</id>
+         <iterationEntity>
+            <iterationType>SPECIFIC</iterationType>
+            <value>1</value>
+         </iterationEntity>
+         <testDataId>Data Files/Lelang/ikut lelang</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>85745226-c5de-4867-91db-149e3d7094e9</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>jenis bid</value>
+         <variableId>435a29dd-cb46-449e-a364-a6411021a64c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>85745226-c5de-4867-91db-149e3d7094e9</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>harga_penawaran</value>
+         <variableId>e40baa7f-811b-4801-8e9d-90d4ef46bb73</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>85745226-c5de-4867-91db-149e3d7094e9</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>status_penawaran</value>
+         <variableId>cab1b4fe-9d34-4bce-9efb-b5e690702352</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>85745226-c5de-4867-91db-149e3d7094e9</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>e11abbca-34a3-4708-bf7c-13742b231b84</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
