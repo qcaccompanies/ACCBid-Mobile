@@ -128,13 +128,13 @@
       <guid>62291c50-e930-4ec6-a769-9c8b83fddf6d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Christi/Task Ikut Lelang Terbuka</testCaseId>
+      <testCaseId>Test Cases/Christi/Task 33 Ikut Lelang Terbuka</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>85745226-c5de-4867-91db-149e3d7094e9</id>
          <iterationEntity>
             <iterationType>SPECIFIC</iterationType>
-            <value>1</value>
+            <value>2</value>
          </iterationEntity>
          <testDataId>Data Files/Lelang/ikut lelang</testDataId>
       </testDataLink>

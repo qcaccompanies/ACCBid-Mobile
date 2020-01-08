@@ -19,8 +19,8 @@
          <combinationType>ONE</combinationType>
          <id>59b0f429-ae8f-4b00-913e-24dd922b9097</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>3</value>
          </iterationEntity>
          <testDataId>Data Files/TopUP/TOPUP</testDataId>
       </testDataLink>
