@@ -125,9 +125,42 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>62291c50-e930-4ec6-a769-9c8b83fddf6d</guid>
+      <guid>78bddd4f-ac93-4235-98d5-02888f914e9e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
+      <testCaseId>Test Cases/Christi/Task 28 Panduan Lelang</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>d700b244-ed63-432e-a1a6-10a384d4d00c</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Lelang/panduan lelang</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>d700b244-ed63-432e-a1a6-10a384d4d00c</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>view</value>
+         <variableId>f56a6bdf-b63c-4642-b131-4f040b5bc0c2</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d700b244-ed63-432e-a1a6-10a384d4d00c</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>judul</value>
+         <variableId>ffe00547-b34a-4ae0-a554-8b0ab76e2b14</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d700b244-ed63-432e-a1a6-10a384d4d00c</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>8b663a96-6a23-4cd3-997f-c446ff866197</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>62291c50-e930-4ec6-a769-9c8b83fddf6d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Christi/Task 33 Ikut Lelang Terbuka</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>

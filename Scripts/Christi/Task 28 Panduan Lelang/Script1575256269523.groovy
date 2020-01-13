@@ -13,39 +13,39 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
-    FailureHandling.STOP_ON_FAILURE)
+Mobile.startApplication('C:\\Users\\ASUS\\Desktop\\accbid(2).apk', false)
 
 WebUI.delay(7)
 
-Mobile.tap(findTestObject('Page_Login/AKUN'), 0)
+Mobile.tap(findTestObject('akun'), 0)
 
 WebUI.delay(3)
 
 CustomKeywords.'ScrollUpDown.UpDown'(0, 0, 0, 0)
 
-Mobile.tap(findTestObject('Page_Panduan Lelang/lihat.panduan.lelang'), 0)
+Mobile.tap(findTestObject('Page_Panduan Lelang/android.view.View0 - Panduan Lelang'), 0)
 
 WebUI.delay(3)
 
 switch (view.toString()) {
     case 'ikut lelang':
-        Mobile.tap(findTestObject('Page_Panduan Lelang/tata.cara.ikut.lelang'), 0)
+        Mobile.tap(findTestObject('Page_Panduan Lelang/android.view.View0 - Tata Cara ikut Lelang'), 0)
 
         WebUI.delay(7)
 
-        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/judul.tata.cara.ikut.lelang', [('text') : judul]), 
+        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/android.view.View0 - A Tata Cara Ikut Lelang'), 
             0)
 
         WebUI.delay(3)
 
         break
     case 'pembayaran dan pengambilan unit':
-        Mobile.tap(findTestObject('Page_Panduan Lelang/tata.cara.pembayaran.da.pengambilan.unit'), 0)
+        Mobile.tap(findTestObject('Page_Panduan Lelang/android.view.View0 - Tata Cara Pembayaran dan Pengambilan Unit'), 
+            0)
 
         WebUI.delay(3)
 
-        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/judul.tata.cara.ikut.lelang', [('text') : judul]), 
+        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/android.view.View0 - D Tata Cara Pembayaran Dan Pengambilan Unit'), 
             0)
 
         not_run: Mobile.verifyElementText(findTestObject('Page_Panduan Lelang/judul.tata.cara.pembayaran.da.pengambilan.unit'), 
@@ -55,11 +55,11 @@ switch (view.toString()) {
 
         break
     case 'penarikan deposit':
-        Mobile.tap(findTestObject('Page_Panduan Lelang/tata.cara.penarikan.deposit'), 0)
+        Mobile.tap(findTestObject('Page_Panduan Lelang/android.view.View0 - Tata Cara Penarikan Deposit'), 0)
 
         WebUI.delay(3)
 
-        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/judul.tata.cara.ikut.lelang', [('text') : judul]), 
+        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/android.view.View0 - C Tata Cara Penarikan Deposit'), 
             0)
 
         not_run: Mobile.verifyElementText(findTestObject('Page_Panduan Lelang/judul.tata.cara.pembayaran.da.pengambilan.unit'), 
@@ -69,11 +69,11 @@ switch (view.toString()) {
 
         break
     case 'top up deposit':
-        Mobile.tap(findTestObject('Page_Panduan Lelang/tata.cara.top.up.deposit'), 0)
+        Mobile.tap(findTestObject('Page_Panduan Lelang/android.view.View0 - Tata Cara Top Up Deposit'), 0)
 
         WebUI.delay(3)
 
-        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/judul.tata.cara.ikut.lelang', [('text') : judul]), 
+        Mobile.verifyElementVisible(findTestObject('Page_Panduan Lelang/android.view.View0 - B Tata Cara Top Up Deposit'), 
             0)
 
         not_run: Mobile.verifyElementText(findTestObject('Page_Panduan Lelang/judul.tata.cara.pembayaran.da.pengambilan.unit'), 
@@ -86,7 +86,7 @@ switch (view.toString()) {
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('Page_Panduan Lelang/back.to.lihat.panduan.lelang'), 0)
+Mobile.pressBack()
 
 WebUI.delay(3)
 
