@@ -19,15 +19,13 @@ Mobile.startApplication('C:\\Users\\Intan\\Downloads\\accbid.apk', false)
 
 Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('akun'), 0)
+CustomKeywords.'ScrollUpDown.UpDown'(0, 0, 30, 30)
+
+Mobile.tap(findTestObject('ACC Bid/lihat_semua_berita'), 0)
 
 Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('ACC Bid/tentang_kami'), 0)
-
-Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.verifyElementVisible(findTestObject('ACC Bid/logo_accbid'), 0)
+Mobile.tap(findTestObject('ACC Bid/berita_1 (1)'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
