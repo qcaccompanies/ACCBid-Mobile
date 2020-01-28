@@ -127,7 +127,7 @@
    <testCaseLink>
       <guid>78bddd4f-ac93-4235-98d5-02888f914e9e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Christi/Task 28 Panduan Lelang</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
@@ -194,6 +194,66 @@
          <type>DATA_COLUMN</type>
          <value>expected</value>
          <variableId>e11abbca-34a3-4708-bf7c-13742b231b84</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>64402238-c022-4029-879c-33a2dc78ff0f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Christi/Task View History</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>7c85fa61-7135-4560-9e01-cbab8d329d69</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/History/view history</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>7c85fa61-7135-4560-9e01-cbab8d329d69</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>view</value>
+         <variableId>933fbb12-dbce-44e0-b1aa-6b6b4946e564</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>7c85fa61-7135-4560-9e01-cbab8d329d69</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>6e610e8a-aea7-4aad-87c2-db8d28d0ac50</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8e9c0174-99f7-4a43-83a6-c45af0f3a847</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Christi/Task Edit Profil</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>69ec69a0-33fa-421a-bdd4-a2faabf020c6</id>
+         <iterationEntity>
+            <iterationType>RANGE</iterationType>
+            <value>1-3</value>
+         </iterationEntity>
+         <testDataId>Data Files/ubah_profil/Edit Profil</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>edit</value>
+         <variableId>60c573e1-7291-4132-aee2-c751a0c27f19</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varInput</value>
+         <variableId>4cc7e562-d70d-465d-91dc-3886e7784057</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>80fae30c-cff9-40e4-afca-7e4143686e4f</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
