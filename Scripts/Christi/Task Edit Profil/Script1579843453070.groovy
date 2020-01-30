@@ -35,7 +35,7 @@ switch (edit.toString()) {
 
         WebUI.delay(3)
 
-        Mobile.tap(findTestObject('ikut lelang/topup_saldo/android.widget.TextView0 - IMG_20200106_160511_1.jpg', [('text') : varInput]), 
+        Mobile.tap(findTestObject('ikut lelang/topup_saldo/android.widget.TextView0 - IMG_20200106_160511_1.jpg', [('text') : varPhoto]), 
             0)
 
         break
@@ -54,7 +54,7 @@ switch (edit.toString()) {
         WebUI.delay(3)
 
         Mobile.setText(findTestObject('Page Profil/Page Ganti No Handphone/android.widget.EditText0 - Input No. Handphone Baru'), 
-            varInput, 0)
+            varNoHP, 0)
 
         WebUI.delay(3)
 
@@ -77,7 +77,7 @@ switch (edit.toString()) {
 
         WebUI.delay(3)
 
-        Mobile.setText(findTestObject('Page Profil/android.widget.EditText0 - Alamat Ktp'), varInput, 0)
+        Mobile.setText(findTestObject('Page Profil/android.widget.EditText0 - Alamat Ktp'), varAlamat, 0)
 
         WebUI.delay(3)
 
@@ -91,7 +91,7 @@ switch (edit.toString()) {
 
         WebUI.delay(3)
 
-        Mobile.setText(findTestObject('Page Profil/android.widget.EditText0 - Pekerjaan'), 'guru', 0)
+        Mobile.setText(findTestObject('Page Profil/android.widget.EditText0 - Pekerjaan'), varPekerjaan, 0)
 
         WebUI.delay(3)
 
@@ -105,17 +105,231 @@ switch (edit.toString()) {
 
         WebUI.delay(3)
 
-        Mobile.tap(findTestObject('Page Profil/android.widget.Spinner0 - Edit Tgl Lahir'), 0)
+        Mobile.tap(findTestObject('Page Profil/android.widget.Spinner0 Input Tgl Lahir'), 0)
 
         Mobile.delay(3)
 
-        Mobile.tap(findTestObject('ikut lelang/topup_saldo/android.view.View0 - Pilih Tanggal Topup', [('text') : '31']), 
-            0)
+        if (expected == 'pass') {
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.TextView0 - btn set tahun'), 0, FailureHandling.STOP_ON_FAILURE)
 
-        Mobile.delay(5)
+            CustomKeywords.'mobile.Swipers.UpDown'(0.6, 0.9, 540)
 
-        Mobile.tap(findTestObject('ikut lelang/topup_saldo/android.widget.Button0 - SET Tanggal TopUp'), 0)
+            CustomKeywords.'mobile.Swipers.UpDown'(0.6, 0.9, 540)
 
+            CustomKeywords.'mobile.Swipers.UpDown'(0.6, 0.9, 540)
+
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.TextView0 - pilih tahun', [('text') : varTahun]), 
+                0, FailureHandling.STOP_ON_FAILURE)
+
+            Mobile.delay(5)
+
+            switch (varBulan.toString()) {
+                case 'January':
+                    Mobile.verifyElementExist(findTestObject('Page Profil/habis test hapus/android.widget.TextView0 - Month'), 
+                        0)
+
+                    break
+                case 'February':
+                    Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                        0, FailureHandling.STOP_ON_FAILURE)
+
+                    Mobile.verifyElementExist(findTestObject('Page Profil/habis test hapus/android.widget.TextView0 - Month'), 
+                        0)
+
+                    break
+                case 'March':
+                    for (def index : (0..1)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'April':
+                    for (def index : (0..2)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'May':
+                    for (def index : (0..3)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'June':
+                    for (def index : (0..4)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'July':
+                    for (def index : (0..5)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'August':
+                    for (def index : (0..6)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'September':
+                    for (def index : (0..7)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'October':
+                    for (def index : (0..8)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'November':
+                    for (def index : (0..9)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'December':
+                    for (def index : (0..10)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+            }
+            
+            Mobile.delay(5)
+
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.view.View0 - pilih tgl', [('text') : varTanggal]), 
+                0, FailureHandling.STOP_ON_FAILURE)
+
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.Button0 - SET'), 0)
+
+            WebUI.delay(5)
+
+            Mobile.tap(findTestObject('Page Profil/android.view.View0 - Simpan'), 0)
+        } else if (expected == 'fail') {
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.TextView0 - btn set tahun'), 0, FailureHandling.STOP_ON_FAILURE)
+
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.TextView0 - pilih tahun', [('text') : varTahun]), 
+                0, FailureHandling.STOP_ON_FAILURE)
+
+            Mobile.delay(5)
+
+            switch (varBulan.toString()) {
+                case 'January':
+                    Mobile.verifyElementExist(findTestObject('Page Profil/habis test hapus/android.widget.TextView0 - Month'), 
+                        0)
+
+                    break
+                case 'February':
+                    Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                        0, FailureHandling.STOP_ON_FAILURE)
+
+                    Mobile.verifyElementExist(findTestObject('Page Profil/habis test hapus/android.widget.TextView0 - Month'), 
+                        0)
+
+                    break
+                case 'March':
+                    for (def index : (0..1)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'April':
+                    for (def index : (0..2)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'May':
+                    for (def index : (0..3)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'June':
+                    for (def index : (0..4)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'July':
+                    for (def index : (0..5)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'August':
+                    for (def index : (0..6)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'September':
+                    for (def index : (0..7)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'October':
+                    for (def index : (0..8)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'November':
+                    for (def index : (0..9)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+                case 'December':
+                    for (def index : (0..10)) {
+                        Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.ImageButton0 - Next month'), 
+                            0, FailureHandling.STOP_ON_FAILURE)
+                    }
+                    
+                    break
+            }
+            
+            Mobile.delay(5)
+
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.view.View0 - pilih tgl', [('text') : varTanggal]), 
+                0, FailureHandling.STOP_ON_FAILURE)
+
+            Mobile.tap(findTestObject('Page Profil/Page set tgl lahir/android.widget.Button0 - SET'), 0)
+
+            WebUI.delay(5)
+
+            Mobile.tap(findTestObject('Page Profil/android.view.View0 - Simpan'), 0)
+
+            Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+            Mobile.verifyElementVisible(findTestObject('Page Profil/Page set tgl lahir/android.view.View0 - Tgl. Lahir (No Text)'), 
+                0)
+        }
+        
         WebUI.delay(3)
 
         break

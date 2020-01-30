@@ -13,7 +13,7 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import com.kms.katalon.core.webui.driver.DriverFactory
 
 public class DatepickerHandler {
-//	static WebElement SelectCalender=null
+	//	static WebElement SelectCalender=null
 
 	@Keyword
 	public static void handleDatepicker(TestObject calender, String exp_Date, String exp_Month,
@@ -28,8 +28,8 @@ public class DatepickerHandler {
 				"Aug", "Sep", "Oct", "Nov", "Dec");
 		def driver = DriverFactory.getWebDriver()
 		WebElement SelectCalender = WebUiCommonHelper.findWebElement(calender, 20);
-//		JavascriptExecutor executor = ((JavascriptExecutor)driver);
-//		executor.executeScript("arguments[0].click();", SelectCalender);
+		//		JavascriptExecutor executor = ((JavascriptExecutor)driver);
+		//		executor.executeScript("arguments[0].click();", SelectCalender);
 		SelectCalender.click()
 		// Set your expected date, month and year.
 		expDate = (exp_Date);
@@ -94,10 +94,10 @@ public class DatepickerHandler {
 							}
 						}
 					}
-//					else{
-//
-//						throw new Exception()
-//					}
+					//					else{
+					//
+					//						throw new Exception()
+					//					}
 				}
 
 				dateNotFound = false;

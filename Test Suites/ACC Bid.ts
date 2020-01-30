@@ -233,7 +233,7 @@
          <id>69ec69a0-33fa-421a-bdd4-a2faabf020c6</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-3</value>
+            <value>6-7</value>
          </iterationEntity>
          <testDataId>Data Files/ubah_profil/Edit Profil</testDataId>
       </testDataLink>
@@ -246,14 +246,50 @@
       <variableLink>
          <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>varInput</value>
+         <value>varFoto</value>
          <variableId>4cc7e562-d70d-465d-91dc-3886e7784057</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>expected</value>
+         <value>varNoHP</value>
          <variableId>80fae30c-cff9-40e4-afca-7e4143686e4f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varPekerjaan</value>
+         <variableId>0c2cad90-5486-4de2-9c99-359fcd95a2b8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varAlamat</value>
+         <variableId>fe43a055-2243-4135-b87a-3b53b8242c30</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varTgl</value>
+         <variableId>d8a398f4-d205-4e2e-afbe-e515679465b8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varBulan</value>
+         <variableId>c11f4fe3-0043-4fc6-a64d-ae57a4eb8ce9</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>varTahun</value>
+         <variableId>4be4c16e-8837-479c-903f-a24f3020637d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>69ec69a0-33fa-421a-bdd4-a2faabf020c6</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected</value>
+         <variableId>9b0b5654-ef93-4e4a-a982-86f7a16bfb8b</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
