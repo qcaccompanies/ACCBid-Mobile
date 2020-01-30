@@ -13,45 +13,28 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-not_run: WebUI.callTestCase(findTestCase('Christi/User_Login'), [('email') : 'christiantiangelin@gmail.com', ('password') : 'Chr!st1'], 
-    FailureHandling.STOP_ON_FAILURE)
-
 Mobile.startApplication('C:\\Users\\ASUS\\Desktop\\accbid(2).apk', false)
 
-WebUI.delay(15)
+WebUI.delay(5)
 
-Mobile.tap(findTestObject('akun'), 0)
-
-WebUI.delay(3)
-
-Mobile.tap(findTestObject('Kritik Saran/Kritik_Saran'), 0)
+Mobile.tap(findTestObject('Page History/android.view.View0 - History'), 0)
 
 WebUI.delay(3)
 
-Mobile.tap(findTestObject('Kritik Saran/kritik saran produk'), 0)
-
-WebUI.delay(3)
-
-switch (expected.toString()) {
-    case 'pass':
-        Mobile.setText(findTestObject('Kritik Saran/input text'), input_text, 0)
+switch (view.toString()) {
+    case 'event sedang berlangsung':
+        Mobile.tap(findTestObject('Page History/android.widget.Button0 - Sedang Berlangsung'), 0)
 
         WebUI.delay(3)
 
-        Mobile.tap(findTestObject('Kritik Saran/btn submit'), 0)
-
         break
-    case 'failed':
-        Mobile.tap(findTestObject('Kritik Saran/btn submit'), 0)
+    case 'event selesai':
+        Mobile.tap(findTestObject('Page History/android.widget.Button0 - Selesai'), 0)
 
-        WebUI.delay(5)
-
-        Mobile.verifyElementVisible(findTestObject('ACC Bid/android.view.error.empty.input'), 0)
+        WebUI.delay(3)
 
         break
 }
-
-WebUI.delay(7)
 
 Mobile.closeApplication()
 
