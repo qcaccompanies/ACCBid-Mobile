@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-Mobile.startApplication('C:/Users/Marvin/git/ACCBid-Mobile/accbid.apk', false)
+Mobile.startApplication('C:\\Users\\Intan\\Downloads\\accbid.apk', false)
 
 Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
 
@@ -35,8 +35,8 @@ Mobile.tap(findTestObject('Lelang Tertutup/Ikut_Lelang_BTN'), 0)
 
 Mobile.tap(findTestObject('Lelang Tertutup/Masukan_Penawaran_BTN'), 0)
 
-if (Mobile.verifyElementVisible(findTestObject('Lelang Tertutup/Alert_Dana_Tidak_Mecukupi'), 0, FailureHandling.OPTIONAL)) {
-    Mobile.verifyElementVisible(findTestObject('Lelang Tertutup/Masukan_Penawaran_BTN'), 0)
+if (Mobile.verifyElementVisible(findTestObject('Lelang Tertutup/warning_sudah_masukkan_2kali'), 0, FailureHandling.OPTIONAL)) {
+    Mobile.verifyElementVisible(findTestObject('Lelang Tertutup/warning_sudah_masukkan_2kali'), 0)
 } else {
     Mobile.setText(findTestObject('Lelang Tertutup/Input_Penwaran'), UangLelang, 0)
 
